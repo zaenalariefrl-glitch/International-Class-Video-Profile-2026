@@ -8,7 +8,7 @@
   - Frame polaroid: krem `#F6F1E6`, caption navy `#09153F`
 - Logo UNIKAL tampil dengan warna asli (kuning lambang `#FFDE06`, navy `#09153F`), tidak diwarnai ulang.
 - Tipografi: Fraunces (judul, kata kunci miring emas) + Geist (teks kecil). Diwarisi dari video portofolio Jen.
-- Peran: Raisa Alatas = Moderator. Luciana Lelihoo Madeira (Lucy), Erick Kurniawan Syah, Laela = Narasumber (Speaker).
+- Peran: Raisa Alatas = Moderator. Luciana Lelihoo Madeira (Lucy), Erick Kurniawan Syah, Laela Nur Fahmi = Narasumber (Speaker).
 - Tiap orang tampil satu per satu dengan nama dan peran tertulis.
 - Ukuran semua video: 16:9, 1920x1080 (ukuran PPT), diputar di backdrop acara. VERIFY: kalau backdrop LED, cek resolusi ke vendor.
 - Video dokumenter: Jen kirim klip acak, Claude beri satu judul per video. Klip potret dalam bingkai yang bergeser seperti video portofolio.
@@ -23,7 +23,6 @@
 
 ## Menunggu
 - Logo lain (FEB, Unggul, Ikhlas, Diktisaintek) dikirim Jen lewat chat.
-- CV / nama lengkap Laela.
 
 ## Video Utama (pembuka talkshow)
 - Fungsi: diputar di backdrop sebagai pembuka sesi talkshow, memperkenalkan moderator dan narasumber.

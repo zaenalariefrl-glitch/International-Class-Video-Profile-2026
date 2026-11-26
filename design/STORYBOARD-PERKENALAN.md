@@ -90,21 +90,36 @@ Teks    : STUDENT EXCHANGE
 SFX     : shutter, shimmer
 
 ---------------------------------------------------------------
-## 4. LAELA [NAMA LENGKAP] · SPEAKER 03 (25 dtk)  [MENUNGGU CV]
+## 4. LAELA NUR FAHMI · SPEAKER 03 (70 dtk)
 
-### Beat 4A · Kartu nama (0:00 sampai 0:07)
+### Beat 4A · Kartu nama
 Teks    : SPEAKER 03
-          Laela *[nama belakang]*
+          Laela *Nur* Fahmi
           Management Student, Universitas Pekalongan
+          Class Representative, International Class
 Caption polaroid: Laela, 2026
+SFX     : whoosh masuk, kertas jatuh
 
-### Beat 4B · Sorotan (0:07 sampai 0:16)
-Visual  : Polaroid dari folder Malaysia (12 foto).
-Teks    : [VERIFY dari CV: nama program di Malaysia, tahun, peran]
+### Beat 4B · Sorotan
+Visual  : Polaroid dari folder Lian-lain dan P2MW 2026.
+Teks    : *Solving* problems that matter.
+          Group Leader, Community Outreach Program 2025
+            with students from Universiti Brunei Darussalam
+          Head of Human Resources Development
+            GenBI Komisariat Universitas Pekalongan
+          Bank Indonesia Education Assistance Program
+            2026
+          Funded Student Entrepreneur, P2MW 2026
+            KMI Expo 2026
+SFX     : whoosh, kertas jatuh berurutan
 
-### Beat 4C · Pencapaian utama (0:16 sampai 0:25)
-Visual  : Polaroid dari folder P2MW 2026 (13 foto, termasuk KMI Expo 2026).
-Teks    : [VERIFY: P2MW 2026 lolos pendanaan atau peserta? KMI Expo 2026 perannya apa?]
+### Beat 4C · Pencapaian utama
+Visual  : Polaroid besar dari folder Malaysia, watermark "Malaysia".
+Teks    : FIRST PLACE
+          *Problem Solving* Category
+          International Business Plan Competition 2025
+          Malaysia
+SFX     : shutter, shimmer
 Akhir   : Geser ke adegan penutup.
 
 ---------------------------------------------------------------
