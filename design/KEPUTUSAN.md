@@ -46,3 +46,10 @@
 | 5 | Speaker 02: Erick Kurniawan Syah | 70 dtk | Exchange UBD, InnovFest UBD, Student Innovative 2024 |
 | 6 | Speaker 03: Laela | 70 dtk | Malaysia, P2MW 2026 (menunggu CV) |
 | 7 | Penutup + aba-aba | 25 dtk | Empat polaroid berkumpul, "Learning Without Borders", lalu "Please welcome our moderator / Raisa Alatas". Frame terakhir diam di backdrop saat Raisa masuk |
+
+## Revisi konten (dari review gambar diam)
+- Foto perkenalan dibuat close up dan proporsional (crop kepala sampai pinggang, tubuh di tengah).
+- Pencapaian Laela: **Best Idea Category**, IBPC 2, MILA University Malaysia, sesuai poster resmi FEB. Prestasi tim, ide bisnis "Nonabog".
+- Tiap kartu nama punya satu kalimat bio, tiap pengalaman dan pencapaian punya deskripsi singkat. Semua dari isi CV, tanpa tambahan klaim.
+- Lucy di Beyond Borders 2026: ditulis "Represented Timor Leste" sesuai CV (bukan "Speaker").
+- Raisa: ditambah item Community Service Project (PKM Ikan Asap 2026) dari CV, cocok dengan video kegiatannya.

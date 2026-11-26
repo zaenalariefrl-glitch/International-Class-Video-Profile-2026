@@ -33,6 +33,12 @@
   .items { margin-top: 34px; }
   .items p { padding: 16px 0; border-top: 1px solid rgba(246,241,230,.16); font: 400 25px/1.35 var(--sans); color: var(--mute); }
   .items p b { display: block; font: 400 34px/1.15 var(--serif); color: var(--cream); margin-bottom: 4px; }
+  .items p i { display: block; margin-top: 8px; font: italic 400 23px/1.4 var(--serif); color: var(--soft); max-width: 740px; }
+  .items.dense p { padding: 12px 0; }
+  .items.dense p b { font-size: 30px; }
+  .items.dense p i { font-size: 21px; margin-top: 5px; }
+  .bio { margin-top: 44px; padding-top: 26px; border-top: 1px solid rgba(233,197,70,.35); max-width: 700px; font: italic 400 32px/1.45 var(--serif); color: var(--soft); }
+  .desc { margin-top: 30px; padding-top: 24px; border-top: 1px solid rgba(233,197,70,.35); max-width: 760px; font: italic 400 30px/1.45 var(--serif); color: var(--soft); }
   .flag { font: 600 30px/1 var(--sans); letter-spacing: .34em; text-transform: uppercase; color: var(--gold); }
   .big { margin-top: 26px; font: 400 104px/1 var(--serif); letter-spacing: -.02em; }
   .detail { margin-top: 26px; font: 400 30px/1.45 var(--sans); color: var(--soft); }
@@ -67,11 +73,13 @@ const SCENES = [
   // RAISA · MODERATOR (45 dtk)
   { type: 'card', dur: 18, wm: 'Moderator', kick: 'The Moderator', name: 'Raisa <em>Alatas</em>',
     sub: 'Management Student, Universitas Pekalongan',
+    bio: 'Passionate about business development, communication, and organizational leadership.',
     photo: { src: 'raisa/pro_close.jpg', w: 520, h: 700, cap: 'Raisa, 2026', pos: '50% 50%' } },
   { type: 'highlight', dur: 27, wm: 'Purpose', ln: '<em>Leading</em> with purpose.',
-    items: [['Best Academic Performance', 'Academic Year 2025/2026'],
-            ['International Collaborative Project', 'Kalasin University, Thailand'],
-            ['Head of Clothing Division', 'Rooang Karya']],
+    items: [['Best Academic Performance', 'Academic Year 2025/2026', 'Awarded for the highest GPA of the academic year.'],
+            ['International Collaborative Project', 'Kalasin University, Thailand', 'Exchanged perspectives on Indonesian and Thai communication styles.'],
+            ['Head of Clothing Division', 'Rooang Karya', 'Led the division from planning to execution of its programs.'],
+            ['Community Service Project', 'Smoked Fish MSMEs, 2026', 'Supported brand identity, packaging design, and marketing.']],
     photos: [
       { src: 'raisa/act1.jpg', w: 540, h: 340, cap: 'Universitas Pekalongan', x: 990, y: 110, r: -2.5, pos: '30% 85%' },
       { src: 'raisa/act2.jpg', w: 500, h: 375, cap: 'Studium Generale', x: 1330, y: 580, r: 2, pos: '50% 50%' },
@@ -80,11 +88,12 @@ const SCENES = [
   // LUCY · SPEAKER 01 (70 dtk)
   { type: 'card', dur: 18, wm: 'Speaker', kick: 'Speaker 01', name: 'Luciana <em>Lelihoo</em><br>Madeira',
     sub: 'International Student from Timor Leste', sub2: 'Management, Class of 2025',
+    bio: 'Experienced in project administration, documentation, and team coordination.',
     photo: { src: 'lucy/pro_close.jpg', w: 560, h: 700, cap: 'Lucy, Dili to Pekalongan', pos: '50% 50%' } },
   { type: 'highlight', dur: 27, wm: 'Cultures', ln: '<em>Bridging</em> cultures.',
-    items: [['International Student Community Engagement', '2025'],
-            ['The Untold Stories of International Students', 'Beyond Borders 2026, Speaker'],
-            ['Creative Writers Community of Timor Leste', 'KPKERS TL']],
+    items: [['International Student Community Engagement', '2025', 'Environmental care, village based creative economy, and local culture for international students.'],
+            ['The Untold Stories of International Students', 'Beyond Borders 2026', 'Represented Timor Leste and shared cross cultural experiences with students from many nations.'],
+            ['Creative Writers Community of Timor Leste', 'KPKERS TL', 'Supported project planning, documentation, and community literacy programs.']],
     photos: [
       { src: 'lucy/bb3.jpg', w: 600, h: 338, cap: 'Beyond Borders 2026', x: 990, y: 110, r: -2, pos: '50% 50%' },
       { src: 'lucy/ise2.jpg', w: 540, h: 360, cap: 'Community Engagement 2025', x: 1300, y: 500, r: 2.5, pos: '50% 50%' },
@@ -92,41 +101,46 @@ const SCENES = [
       { src: 'lucy/ise3.jpg', w: 280, h: 373, cap: 'By the river', x: 1000, y: 560, r: -3, pos: '50% 50%' } ] },
   { type: 'achieve', dur: 25, wm: 'Champion', flag: 'First Place', big: 'Indonesian <em>Poetry</em> Reading',
     detail: 'BIPA Competition toward Festival Handai Indonesia 2026<br>Representing Universitas Pekalongan',
+    desc: 'Top honors in a national competition for international learners of the Indonesian language.',
     main: { src: 'lucy/loose2.jpg', w: 760, h: 570, cap: 'The award', x: 1040, y: 150, r: -1.5, pos: '45% 45%' },
     clip: { src: 'lucy/loose1.jpg', w: 300, h: 375, x: 1560, y: 600, r: 3 } },
 
   // ERICK · SPEAKER 02 (70 dtk)
   { type: 'card', dur: 18, wm: 'Speaker', kick: 'Speaker 02', name: 'Erick <em>Kurniawan</em><br>Syah',
     sub: 'Management Student, Universitas Pekalongan',
+    bio: 'An aspiring entrepreneur who believes success means creating value for others.',
     photo: { src: 'erick/pro_close.jpg', w: 520, h: 700, cap: 'Erick, 2026', pos: '50% 50%' } },
   { type: 'highlight', dur: 27, wm: 'Ventures', ln: '<em>Building</em> ideas into ventures.',
-    items: [['Student Innovative', 'Business Plan Participant, 2024'],
-            ['Innovation Festival (InnovFest)', 'Universiti Brunei Darussalam, Participant']],
+    items: [['Student Innovative', 'Business Plan Participant, 2024', 'Pitched a business idea in front of potential investors.'],
+            ['Innovation Festival (InnovFest)', 'Universiti Brunei Darussalam, Participant', 'A festival of creativity, innovation, and entrepreneurship connecting students, academics, and the community.']],
     photos: [
       { src: 'erick/act4.jpg', w: 330, h: 440, cap: 'In class', x: 1000, y: 110, r: -2.5, pos: '50% 50%' },
       { src: 'erick/act5.jpg', w: 330, h: 440, cap: 'Cultural day', x: 1390, y: 150, r: 2, pos: '50% 40%' },
       { src: 'erick/act2.jpg', w: 500, h: 375, cap: 'New friends', x: 1150, y: 600, r: -1.5, pos: '50% 50%' } ] },
   { type: 'achieve', dur: 25, wm: 'Brunei', flag: 'Student Exchange', big: 'Universiti <em>Brunei</em><br>Darussalam',
     detail: '2026',
+    desc: 'Studied abroad to gain new perspectives, networks, and a different academic culture.',
     main: { src: 'erick/act3.jpg', w: 760, h: 570, cap: 'Brunei Darussalam, 2026', x: 1040, y: 130, r: -1.5, pos: '50% 50%' },
     clip: { src: 'erick/act7.jpg', w: 360, h: 270, x: 1500, y: 700, r: 3, print: true, cap: 'Certificate' } },
 
   // LAELA · SPEAKER 03 (70 dtk)
   { type: 'card', dur: 18, wm: 'Speaker', kick: 'Speaker 03', name: 'Laela <em>Nur</em><br>Fahmi',
     sub: 'Management Student, Universitas Pekalongan', sub2: 'Class Representative, International Class',
+    bio: 'Active in and beyond the classroom, growing through leadership and teamwork.',
     photo: { src: 'laela/pro_close.jpg', w: 520, h: 700, cap: 'Laela, 2026', pos: '50% 50%' } },
   { type: 'highlight', dur: 27, wm: 'Impact', ln: '<em>Solving</em> problems that matter.',
-    items: [['Group Leader, Community Outreach Program 2025', 'with students from Universiti Brunei Darussalam'],
-            ['Head of Human Resources Development', 'GenBI Komisariat Universitas Pekalongan'],
-            ['Bank Indonesia Education Assistance Program', '2026'],
-            ['Funded Student Entrepreneur, P2MW 2026', 'KMI Expo 2026']],
+    items: [['Group Leader, Community Outreach Program 2025', 'with students from Universiti Brunei Darussalam', 'Led one of three groups in a joint community program.'],
+            ['Head of Human Resources Development', 'GenBI Komisariat Universitas Pekalongan', 'Leads programs for member skills, self development, and team building.'],
+            ['Bank Indonesia Education Assistance Program', '2026', 'Selected recipient of the central bank education program.'],
+            ['Funded Student Entrepreneur, P2MW 2026', 'KMI Expo 2026', 'Secured national funding for a student business and exhibited it.']],
     photos: [
       { src: 'laela/etc5.jpg', w: 500, h: 375, cap: 'COP 2025', x: 990, y: 100, r: -2, pos: '50% 50%' },
       { src: 'laela/p2mw4.jpg', w: 500, h: 375, cap: 'KMI Expo 2026', x: 1290, y: 590, r: 2, pos: '50% 50%' },
       { src: 'laela/p2mw13.jpg', w: 260, h: 320, cap: 'P2MW 2026', x: 1590, y: 80, r: 3, pos: '50% 50%' } ] },
-  // [VERIFY] Poster resmi: "Juara I Categories Best Idea, IBPC 2, MILA University Malaysia" (tim). CV: "problem solving".
+  // Sumber: poster resmi FEB (Juara I Categories Best Idea, IBPC 2, MILA University Malaysia), prestasi tim.
   { type: 'achieve', dur: 25, wm: 'Malaysia', flag: 'First Place', big: 'Best <em>Idea</em> Category',
     detail: 'International Business Plan Competition 2<br>MILA University, Malaysia',
+    desc: 'Won as a team with the business idea Nonabog.',
     main: { src: 'laela/my6.jpg', w: 450, h: 600, cap: 'MILA University', x: 1060, y: 120, r: -2, pos: '50% 35%' },
     clip: { src: 'laela/my10.jpg', w: 330, h: 440, x: 1500, y: 470, r: 3, print: true, cap: 'Kuala Lumpur' } },
 
@@ -181,7 +195,8 @@ SCENES.forEach((s, i) => {
     const p = print({ ...s.photo, x: 220, y: 150, r: -2.5 }); b.append(p);
     const kids = [el('p', 'kick', s.kick), el('h2', 'name', s.name), el('p', 'sub', s.sub)];
     if (s.sub2) kids.push(el('p', 'sub2', s.sub2));
-    const c = copyBlock(900, s.sub2 ? 270 : 320, 900, kids); b.append(c);
+    if (s.bio) kids.push(el('p', 'bio', s.bio));
+    const c = copyBlock(900, s.sub2 ? 230 : 280, 900, kids); b.append(c);
     tl.fromTo(p, { opacity: 0, y: -90, scale: 1.08 }, { opacity: 1, y: 0, scale: 1, duration: 1.6, ease: 'expo.out' }, T + 1.0);
     tl.fromTo(p.querySelector('img'), { scale: 1.14 }, { scale: 1, duration: s.dur, ease: 'sine.out' }, T);
     tl.to(p, { y: 16, duration: 4.5, ease: 'sine.inOut', yoyo: true, repeat: Math.floor((s.dur - 3) / 4.5) }, T + 2.8);
@@ -190,8 +205,9 @@ SCENES.forEach((s, i) => {
 
   if (s.type === 'highlight') {
     const ps = s.photos.map(ph => print(ph)); ps.forEach(p => b.append(p));
-    const items = el('div', 'items'); s.items.forEach(([h, d]) => items.append(el('p', null, `<b>${h}</b>${d}`)));
-    const c = copyBlock(130, s.items.length > 3 ? 170 : 230, 780, [el('h3', 'ln', s.ln), items]); b.append(c);
+    const items = el('div', 'items'); s.items.forEach(([h, d, x]) => items.append(el('p', null, `<b>${h}</b>${d}${x ? `<i>${x}</i>` : ''}`)));
+    if (s.items.length > 3) items.classList.add('dense');
+    const c = copyBlock(130, s.items.length > 3 ? 120 : 190, 780, [el('h3', 'ln', s.ln), items]); b.append(c);
     ps.forEach((p, j) => {
       tl.fromTo(p, { opacity: 0, y: -90, scale: 1.08 }, { opacity: 1, y: 0, scale: 1, duration: 1.5, ease: 'expo.out' }, T + 1.0 + j * 1.1);
       tl.fromTo(p.querySelector('img'), { scale: 1.12 }, { scale: 1, duration: s.dur, ease: 'sine.out' }, T);
@@ -209,10 +225,12 @@ SCENES.forEach((s, i) => {
       Object.assign(cl.style, { left: s.clip.x + 'px', top: s.clip.y + 'px', transform: `rotate(${s.clip.r}deg)` }); }
     b.append(cl);
     const kids = [el('p', 'flag', s.flag), el('h3', 'big', s.big), el('p', 'detail', s.detail)];
+    if (s.desc) kids.push(el('p', 'desc', s.desc));
     const c = copyBlock(130, 300, 820, kids); b.append(c);
     tl.fromTo(kids[0], { opacity: 0, letterSpacing: '0.8em' }, { opacity: 1, letterSpacing: '0.34em', duration: 2.2, ease: 'power3.out' }, T + 1.4);
     tl.fromTo(kids[1], { opacity: 0, filter: 'blur(10px)', y: 20 }, { opacity: 1, filter: 'blur(0px)', y: 0, duration: 1.6, ease: 'power2.out' }, T + 2.4);
     tl.fromTo(kids[2], { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 1.4, ease: 'power2.out' }, T + 3.4);
+    if (kids[3]) tl.fromTo(kids[3], { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 1.4, ease: 'power2.out' }, T + 4.6);
     tl.fromTo(m, { opacity: 0, y: -100, scale: 1.1 }, { opacity: 1, y: 0, scale: 1, duration: 1.7, ease: 'expo.out' }, T + 1.0);
     tl.fromTo(m.querySelector('img'), { scale: 1.16 }, { scale: 1, duration: s.dur, ease: 'sine.out' }, T);
     tl.fromTo(cl, { opacity: 0, y: -90, rotation: s.clip.r + 6 }, { opacity: 1, y: 0, rotation: s.clip.r, duration: 1.5, ease: 'expo.out' }, T + 3.0);
