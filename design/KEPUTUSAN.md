@@ -24,7 +24,6 @@
 ## Menunggu
 - Logo lain (FEB, Unggul, Ikhlas, Diktisaintek) dikirim Jen lewat chat.
 - CV / nama lengkap Laela.
-- Foto kegiatan tambahan Raisa.
 
 ## Video Utama (pembuka talkshow)
 - Fungsi: diputar di backdrop sebagai pembuka sesi talkshow, memperkenalkan moderator dan narasumber.
@@ -33,7 +32,9 @@
 - Durasi total sekitar 5 menit (300 dtk). Tempo lambat, tidak terburu buru.
 - Frame rate 60 fps. Gerak halus: easing sine dan expo out, zoom pelan terus menerus, transisi geser 1,2 sampai 1,6 dtk, tidak ada potongan mendadak.
 - Pembagian waktu: Pembuka 20 dtk, Raisa 45 dtk (A 18, B 27), tiap narasumber 70 dtk (A 18, B 27, C 25), Penutup dan aba aba 25 dtk.
-- Audio: TANPA musik untuk sekarang. Hanya efek suara (whoosh geser adegan, foto jatuh, shutter, dsb).
+- Musik ditambahkan sendiri oleh Jen setelah render. Claude tidak mengurus musik.
+- Bahan Raisa dipakai apa adanya (2 foto + 1 video). Hindari kesan berulang: pakai potongan frame video, crop detail berbeda, dan susunan polaroid yang bervariasi.
+- Audio: TANPA musik. Hanya efek suara (whoosh geser adegan, foto jatuh, shutter, dsb).
 - Teks layar: "Timor Leste" ditulis tanpa tanda hubung.
 - **ATURAN: JANGAN render video (MP4) sebelum Jen memberi perintah.**
 
