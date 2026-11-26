@@ -12,7 +12,9 @@
 - Tiap orang tampil satu per satu dengan nama dan peran tertulis.
 - Ukuran semua video: 16:9, 1920x1080 (ukuran PPT), diputar di backdrop acara. VERIFY: kalau backdrop LED, cek resolusi ke vendor.
 - Video dokumenter: Jen kirim klip acak, Claude beri satu judul per video. Klip potret dalam bingkai yang bergeser seperti video portofolio.
-  Usulan template: "Rol Film" di latar krem (design/documentary/contoh-dokumenter.png), menunggu persetujuan.
+- Template dokumenter: **Opsi C Cinematic** (design/documentary/dok-opsi-C.png). Letterbox, satu klip potret aktif di tengah, klip lain redup, carousel bergeser.
+- Dokumenter TANPA keterangan nama kegiatan spesifik. Judul dibuat umum.
+- Gaya tulisan Jen: jangan pakai tanda hubung atau pisah (-, en dash, em dash) di teks video.
 
 ## Aset
 - `assets/logos/lambang-unikal.png`: lambang UNIKAL 1484x1500, latar transparan. Dipakai di video, warna asli tidak diubah.
