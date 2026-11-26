@@ -110,6 +110,7 @@ if (LIVE) {
 window.__seek = async t => {
   tl.seek(t % LOOP, false); tcEl.textContent = fmt(t);
   await Promise.all(cards.map((c, i) => new Promise(res => {
+    if (+getComputedStyle(c.el).opacity < 0.01) return res();   // klip tak terlihat tidak perlu di-seek
     if (c.v.readyState < 1) { c.v.addEventListener('loadedmetadata', () => { c.v.currentTime = videoTime(i, t); c.v.addEventListener('seeked', res, { once: true }); }, { once: true }); return; }
     c.v.currentTime = videoTime(i, t); c.v.addEventListener('seeked', res, { once: true });
   })));
