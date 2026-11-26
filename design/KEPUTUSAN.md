@@ -59,3 +59,4 @@
 - Semua klip MUTE. Tiap klip berulang (loop) dan tidak pernah berhenti, carousel tetap bergeser.
 - Tiap klip aktif di tengah selama 10 dtk, geser 1,8 dtk. Satu putaran penuh 110 dtk, lalu berulang mulus.
 - File: video/documentary.html (mode cek langsung: documentary.html?live=1).
+- Render dokumenter: SATU file 110 dtk, diputar operator dengan mode loop. Frame terakhir menyambung mulus ke frame pertama.
