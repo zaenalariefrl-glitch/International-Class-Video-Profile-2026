@@ -67,7 +67,7 @@ const SCENES = [
   // RAISA · MODERATOR (45 dtk)
   { type: 'card', dur: 18, wm: 'Moderator', kick: 'The Moderator', name: 'Raisa <em>Alatas</em>',
     sub: 'Management Student, Universitas Pekalongan',
-    photo: { src: 'raisa/pro.jpg', w: 520, h: 700, cap: 'Raisa, 2026', pos: '50% 30%' } },
+    photo: { src: 'raisa/pro_close.jpg', w: 520, h: 700, cap: 'Raisa, 2026', pos: '50% 50%' } },
   { type: 'highlight', dur: 27, wm: 'Purpose', ln: '<em>Leading</em> with purpose.',
     items: [['Best Academic Performance', 'Academic Year 2025/2026'],
             ['International Collaborative Project', 'Kalasin University, Thailand'],
@@ -80,7 +80,7 @@ const SCENES = [
   // LUCY · SPEAKER 01 (70 dtk)
   { type: 'card', dur: 18, wm: 'Speaker', kick: 'Speaker 01', name: 'Luciana <em>Lelihoo</em><br>Madeira',
     sub: 'International Student from Timor Leste', sub2: 'Management, Class of 2025',
-    photo: { src: 'lucy/pro.jpg', w: 560, h: 700, cap: 'Lucy, Dili to Pekalongan', pos: '50% 25%' } },
+    photo: { src: 'lucy/pro_close.jpg', w: 560, h: 700, cap: 'Lucy, Dili to Pekalongan', pos: '50% 50%' } },
   { type: 'highlight', dur: 27, wm: 'Cultures', ln: '<em>Bridging</em> cultures.',
     items: [['International Student Community Engagement', '2025'],
             ['The Untold Stories of International Students', 'Beyond Borders 2026, Speaker'],
@@ -98,7 +98,7 @@ const SCENES = [
   // ERICK · SPEAKER 02 (70 dtk)
   { type: 'card', dur: 18, wm: 'Speaker', kick: 'Speaker 02', name: 'Erick <em>Kurniawan</em><br>Syah',
     sub: 'Management Student, Universitas Pekalongan',
-    photo: { src: 'erick/pro.jpg', w: 520, h: 700, cap: 'Erick, 2026', pos: '50% 60%' } },
+    photo: { src: 'erick/pro_close.jpg', w: 520, h: 700, cap: 'Erick, 2026', pos: '50% 50%' } },
   { type: 'highlight', dur: 27, wm: 'Ventures', ln: '<em>Building</em> ideas into ventures.',
     items: [['Student Innovative', 'Business Plan Participant, 2024'],
             ['Innovation Festival (InnovFest)', 'Universiti Brunei Darussalam, Participant']],
@@ -114,7 +114,7 @@ const SCENES = [
   // LAELA · SPEAKER 03 (70 dtk)
   { type: 'card', dur: 18, wm: 'Speaker', kick: 'Speaker 03', name: 'Laela <em>Nur</em><br>Fahmi',
     sub: 'Management Student, Universitas Pekalongan', sub2: 'Class Representative, International Class',
-    photo: { src: 'laela/pro.jpg', w: 520, h: 700, cap: 'Laela, 2026', pos: '50% 22%' } },
+    photo: { src: 'laela/pro_close.jpg', w: 520, h: 700, cap: 'Laela, 2026', pos: '50% 50%' } },
   { type: 'highlight', dur: 27, wm: 'Impact', ln: '<em>Solving</em> problems that matter.',
     items: [['Group Leader, Community Outreach Program 2025', 'with students from Universiti Brunei Darussalam'],
             ['Head of Human Resources Development', 'GenBI Komisariat Universitas Pekalongan'],
@@ -220,7 +220,7 @@ SCENES.forEach((s, i) => {
   }
 
   if (s.type === 'close') {
-    const pros = [['raisa/pro.jpg', '50% 30%'], ['lucy/pro.jpg', '50% 25%'], ['erick/pro.jpg', '50% 60%'], ['laela/pro.jpg', '50% 22%']];
+    const pros = [['raisa/pro_close.jpg', '50% 30%'], ['lucy/pro_close.jpg', '50% 25%'], ['erick/pro_close.jpg', '50% 60%'], ['laela/pro_close.jpg', '50% 22%']];
     const caps = ['Raisa', 'Lucy', 'Erick', 'Laela'];
     const xs = [250, 640, 1030, 1420], rs = [-4, 2, -2, 3.5];
     const ps = pros.map(([src, pos], j) => print({ src, pos, w: 300, h: 380, cap: caps[j], x: xs[j], y: 130, r: rs[j] }));
@@ -230,7 +230,7 @@ SCENES.forEach((s, i) => {
     c1.append(h); b.append(c1);
     // aba-aba moderator
     const c2 = el('div', 'center');
-    const rp = print({ src: 'raisa/pro.jpg', pos: '50% 30%', w: 360, h: 470, cap: 'Raisa, 2026' }); Object.assign(rp.style, { position: 'relative', left: 'auto', top: 'auto' });
+    const rp = print({ src: 'raisa/pro_close.jpg', pos: '50% 50%', w: 360, h: 470, cap: 'Raisa, 2026' }); Object.assign(rp.style, { position: 'relative', left: 'auto', top: 'auto' });
     const k2 = el('p', 'kick', 'Please welcome our moderator'); k2.style.marginTop = '56px';
     const n2 = el('h2', 'name', 'Raisa <em>Alatas</em>');
     c2.append(rp, k2, n2); b.append(c2);
