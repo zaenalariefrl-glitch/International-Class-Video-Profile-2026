@@ -2,5 +2,5 @@
 const { chromium } = require('playwright'); const path = require('path');
 (async () => { const b = await chromium.launch(); const p = await b.newPage();
   await p.goto('file://' + path.resolve('index.html'), { waitUntil: 'load', timeout: 60000 });
-  const cues = await p.evaluate(() => window.__cues); require('fs').writeFileSync('sfx/cues.json', JSON.stringify(cues, null, 1));
+  const cues = await p.evaluate(() => window.__cues); require('fs').writeFileSync('sfx/cues.json', JSON.stringify(cues, null, 1)); require('fs').writeFileSync('sfx/total.json', String(await p.evaluate(() => window.__total)));
   console.log(cues.length, 'cues'); await b.close(); })();

@@ -73,16 +73,35 @@ def swell(dur=3.2):
     env = np.sin(np.pi * np.clip(tt / dur, 0, 1)) ** 2
     return stereo(fade(norm(lp(x, 2500) * env, 0.45), 0.05, 0.3), 1.2)
 
+
+def impact(dur=2.6):
+    # hentakan rendah sinematik: sub bass turun nada + ledakan noise + ekor gema
+    tt = t(dur); n = rng.standard_normal(len(tt))
+    f = 70 * np.exp(-tt * 1.2) + 38
+    sub = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-tt * 2.2)
+    hit = lp(n, 900) * np.exp(-tt * 18) * 0.9
+    tail = lp(bp(n, 120, 3000), 2500) * np.exp(-tt * 2.6) * 0.25
+    return stereo(fade(norm(sub * 1.1 + hit + tail, 0.95), 0.001, 0.4), 1.0)
+
+def riser(dur=2.5):
+    tt = t(dur); n = rng.standard_normal(len(tt)); out = np.zeros_like(n); blk = 1024
+    for i in range(0, len(n), blk):
+        fc = 300 * (6000 / 300) ** (i / len(n))
+        seg = n[max(0, i - 4096):i + blk]; y = bp(seg, fc * .6, min(SR / 2 - 100, fc * 1.5)); out[i:i + blk] = y[-len(n[i:i + blk]):]
+    tone = np.sin(2 * np.pi * np.cumsum(180 + 620 * (tt / dur) ** 2) / SR) * 0.35
+    env = (tt / dur) ** 2.2
+    return stereo(fade(norm((out + tone) * env, 0.8), 0.01, 0.015), 1.0)
+
 BANK = {
     'whoosh': whoosh(), 'whoosh_soft': whoosh(1.8, 200, 2500, 0.6, 0.5),
-    'drop': drop(), 'tick': tick(), 'shutter': shutter(), 'shimmer': shimmer(), 'swell': swell(),
+    'drop': drop(), 'tick': tick(), 'shutter': shutter(), 'shimmer': shimmer(), 'swell': swell(), 'impact': impact(), 'riser': riser(),
 }
-LEVEL = {'whoosh': 0.55, 'whoosh_soft': 0.4, 'drop': 0.5, 'tick': 0.22, 'shutter': 0.45, 'shimmer': 0.3, 'swell': 0.35}
+LEVEL = {'whoosh': 0.55, 'whoosh_soft': 0.4, 'drop': 0.5, 'tick': 0.22, 'shutter': 0.45, 'shimmer': 0.3, 'swell': 0.35, 'impact': 0.7, 'riser': 0.4}
 for k, v in BANK.items():
     wavfile.write(f'{D}/samples/{k}.wav', SR, (v * 32767 * 0.9).astype(np.int16))
 
 cues = json.load(open(f'{D}/cues.json'))
-TOTAL = 300.0
+TOTAL = float(json.load(open(f'{D}/total.json')))
 mix = np.zeros((int(TOTAL * SR) + SR * 3, 2))
 for c in cues:
     s = BANK[c['sfx']] * LEVEL[c['sfx']] * c['gain']

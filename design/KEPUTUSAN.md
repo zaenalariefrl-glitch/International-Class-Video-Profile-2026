@@ -60,3 +60,9 @@
 - Tiap klip aktif di tengah selama 10 dtk, geser 1,8 dtk. Satu putaran penuh 110 dtk, lalu berulang mulus.
 - File: video/documentary.html (mode cek langsung: documentary.html?live=1).
 - Render dokumenter: SATU file 110 dtk, diputar operator dengan mode loop. Frame terakhir menyambung mulus ke frame pertama.
+
+## Revisi pembuka dan penutup
+- Durasi total video utama menjadi 310 dtk (5:10). Penutup 35 dtk.
+- Cold open 0 sampai 3 dtk: montase 6 foto (0,36 dtk per foto, kilatan dan shutter) dengan kata "Four stories." "One class." "No borders.", lalu hitam, lalu lambang UNIKAL menghentak dengan cahaya emas, cincin, dan bunyi impact di 3 dtk.
+- Penutup motivasi: "Four different paths.", "One international classroom.", empat polaroid bertumpuk di tengah, "Your story starts here.", lalu "Learning Without Borders" dengan lambang dan impact, lalu aba aba moderator.
+- SFX baru: impact dan riser (sintetis).
