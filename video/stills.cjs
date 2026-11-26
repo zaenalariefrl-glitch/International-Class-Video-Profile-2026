@@ -6,8 +6,9 @@ const path = require('path');
   const b = await chromium.launch();
   const p = await b.newPage({ viewport: { width: 1920, height: 1080 } });
   const errs = []; p.on('pageerror', e => errs.push(e.message)); p.on('requestfailed', r => errs.push('fail ' + r.url()));
-  await p.goto('file://' + path.resolve('index.html'), { waitUntil: 'networkidle' });
-  await p.evaluate(() => document.fonts.ready);
+  await p.goto('file://' + path.resolve('index.html'), { waitUntil: 'load', timeout: 60000 });
+  await Promise.race([p.evaluate(() => document.fonts.ready), p.waitForTimeout(15000)]);
+  console.log('fonts', await p.evaluate(() => document.fonts.check('40px Fraunces')));
   const marks = await p.evaluate(() => window.__marks);
   console.log('total', await p.evaluate(() => window.__total), errs);
   const shots = [];
@@ -17,9 +18,9 @@ const path = require('path');
   }
   require('fs').mkdirSync(out, { recursive: true });
   for (const s of shots) {
-    await p.evaluate(t => window.__tl.seek(t, false), s.t);
+    const a = Date.now(); await p.evaluate(t => { window.__tl.seek(t, false); }, s.t); console.log('seek', s.name, Date.now() - a);
     await p.waitForTimeout(150);
-    await p.screenshot({ path: `${out}/${s.name}.png` });
+    const c = Date.now(); await p.screenshot({ path: `${out}/${s.name}.png`, timeout: 120000 }); console.log('shot', s.name, Date.now() - c);
   }
   console.log(shots.map(s => s.name + '@' + s.t).join(' '));
   await b.close();

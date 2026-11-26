@@ -73,9 +73,9 @@ const SCENES = [
             ['International Collaborative Project', 'Kalasin University, Thailand'],
             ['Head of Clothing Division', 'Rooang Karya']],
     photos: [
-      { src: 'raisa/act1.jpg', w: 560, h: 380, cap: 'Universitas Pekalongan', x: 1010, y: 120, r: -2.5, pos: '30% 40%' },
-      { src: 'raisa/act2.jpg', w: 520, h: 390, cap: 'Studium Generale', x: 1290, y: 520, r: 2, pos: '50% 50%' },
-      { src: 'raisa/vid1_f3.jpg', w: 250, h: 444, cap: 'Community service', x: 1580, y: 90, r: 3, pos: '50% 40%' } ] },
+      { src: 'raisa/act1.jpg', w: 540, h: 340, cap: 'Universitas Pekalongan', x: 990, y: 110, r: -2.5, pos: '30% 85%' },
+      { src: 'raisa/act2.jpg', w: 500, h: 375, cap: 'Studium Generale', x: 1330, y: 580, r: 2, pos: '50% 50%' },
+      { src: 'raisa/vid1_f3.jpg', w: 250, h: 444, cap: 'Outreach', x: 1610, y: 70, r: 3, pos: '50% 40%' } ] },
 
   // LUCY · SPEAKER 01 (70 dtk)
   { type: 'card', dur: 18, wm: 'Speaker', kick: 'Speaker 01', name: 'Luciana <em>Lelihoo</em><br>Madeira',
@@ -105,7 +105,7 @@ const SCENES = [
     photos: [
       { src: 'erick/act4.jpg', w: 330, h: 440, cap: 'In class', x: 1000, y: 110, r: -2.5, pos: '50% 50%' },
       { src: 'erick/act5.jpg', w: 330, h: 440, cap: 'Cultural day', x: 1390, y: 150, r: 2, pos: '50% 40%' },
-      { src: 'erick/act2.jpg', w: 520, h: 390, cap: 'New friends', x: 1180, y: 600, r: -1.5, pos: '50% 50%' } ] },
+      { src: 'erick/act2.jpg', w: 500, h: 375, cap: 'New friends', x: 1150, y: 600, r: -1.5, pos: '50% 50%' } ] },
   { type: 'achieve', dur: 25, wm: 'Brunei', flag: 'Student Exchange', big: 'Universiti <em>Brunei</em><br>Darussalam',
     detail: '2026',
     main: { src: 'erick/act3.jpg', w: 760, h: 570, cap: 'Brunei Darussalam, 2026', x: 1040, y: 130, r: -1.5, pos: '50% 50%' },
@@ -121,9 +121,9 @@ const SCENES = [
             ['Bank Indonesia Education Assistance Program', '2026'],
             ['Funded Student Entrepreneur, P2MW 2026', 'KMI Expo 2026']],
     photos: [
-      { src: 'laela/etc5.jpg', w: 520, h: 390, cap: 'COP 2025', x: 1010, y: 110, r: -2, pos: '50% 50%' },
-      { src: 'laela/p2mw4.jpg', w: 520, h: 390, cap: 'KMI Expo 2026', x: 1300, y: 520, r: 2, pos: '50% 50%' },
-      { src: 'laela/p2mw13.jpg', w: 270, h: 333, cap: 'P2MW 2026', x: 1600, y: 90, r: 3, pos: '50% 50%' } ] },
+      { src: 'laela/etc5.jpg', w: 500, h: 375, cap: 'COP 2025', x: 990, y: 100, r: -2, pos: '50% 50%' },
+      { src: 'laela/p2mw4.jpg', w: 500, h: 375, cap: 'KMI Expo 2026', x: 1290, y: 590, r: 2, pos: '50% 50%' },
+      { src: 'laela/p2mw13.jpg', w: 260, h: 320, cap: 'P2MW 2026', x: 1590, y: 80, r: 3, pos: '50% 50%' } ] },
   // [VERIFY] Poster resmi: "Juara I Categories Best Idea, IBPC 2, MILA University Malaysia" (tim). CV: "problem solving".
   { type: 'achieve', dur: 25, wm: 'Malaysia', flag: 'First Place', big: 'Best <em>Idea</em> Category',
     detail: 'International Business Plan Competition 2<br>MILA University, Malaysia',
@@ -223,9 +223,9 @@ SCENES.forEach((s, i) => {
     const pros = [['raisa/pro.jpg', '50% 30%'], ['lucy/pro.jpg', '50% 25%'], ['erick/pro.jpg', '50% 60%'], ['laela/pro.jpg', '50% 22%']];
     const caps = ['Raisa', 'Lucy', 'Erick', 'Laela'];
     const xs = [250, 640, 1030, 1420], rs = [-4, 2, -2, 3.5];
-    const ps = pros.map(([src, pos], j) => print({ src, pos, w: 300, h: 380, cap: caps[j], x: xs[j], y: 190, r: rs[j] }));
+    const ps = pros.map(([src, pos], j) => print({ src, pos, w: 300, h: 380, cap: caps[j], x: xs[j], y: 130, r: rs[j] }));
     ps.forEach(p => b.append(p));
-    const c1 = el('div', 'center'); c1.style.top = '560px'; c1.style.justifyContent = 'flex-start';
+    const c1 = el('div', 'center'); c1.style.top = '720px'; c1.style.justifyContent = 'flex-start';
     const h = el('h2', 'hero', 'Learning <em>Without Borders</em>'); h.style.fontSize = '104px';
     c1.append(h); b.append(c1);
     // aba-aba moderator
