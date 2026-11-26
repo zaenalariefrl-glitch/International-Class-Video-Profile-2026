@@ -11,8 +11,13 @@
 - Peran: Raisa Alatas = Moderator. Luciana Lelihoo Madeira (Lucy), Erick Kurniawan Syah, Laela = Narasumber (Speaker).
 - Tiap orang tampil satu per satu dengan nama dan peran tertulis.
 
+## Aset
+- `assets/logos/lambang-unikal.png`: lambang UNIKAL 1484x1500, latar transparan. Dipakai di video, warna asli tidak diubah.
+  Warna terukur: kuning `#FEEF11`, cokelat sayap `#8D5C2C`, merah `#E2322A`, hijau `#129045`, garis hitam.
+  Cokelat sayap boleh dipakai sangat terbatas sebagai warna pendukung (misalnya garis tipis atau caption), bukan warna utama.
+
 ## Menunggu
-- Logo-logo (dikirim Jen lewat chat), termasuk logo FEB untuk cek warna.
+- Logo lain (FEB, Unggul, Ikhlas, Diktisaintek) dikirim Jen lewat chat.
 - CV / nama lengkap Laela.
 - Foto kegiatan tambahan Raisa.
 - Konsep dan template video dokumenter pelengkap (template berbeda).
