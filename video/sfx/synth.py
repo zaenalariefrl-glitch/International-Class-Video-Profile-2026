@@ -94,14 +94,16 @@ def riser(dur=2.5):
 
 BANK = {
     'whoosh': whoosh(), 'whoosh_soft': whoosh(1.8, 200, 2500, 0.6, 0.5),
-    'drop': drop(), 'tick': tick(), 'shutter': shutter(), 'shimmer': shimmer(), 'swell': swell(), 'impact': impact(), 'riser': riser(),
+    'drop': drop(), 'tick': tick(), 'shutter': shutter(), 'shimmer': shimmer(), 'swell': swell(), 'impact': impact(), 'riser': riser(), 'riser_long': riser(7.2),
 }
-LEVEL = {'whoosh': 0.55, 'whoosh_soft': 0.4, 'drop': 0.5, 'tick': 0.22, 'shutter': 0.45, 'shimmer': 0.3, 'swell': 0.35, 'impact': 0.7, 'riser': 0.4}
+LEVEL = {'whoosh': 0.55, 'whoosh_soft': 0.4, 'drop': 0.5, 'tick': 0.22, 'shutter': 0.45, 'shimmer': 0.3, 'swell': 0.35, 'impact': 0.7, 'riser': 0.4, 'riser_long': 0.42}
 for k, v in BANK.items():
     wavfile.write(f'{D}/samples/{k}.wav', SR, (v * 32767 * 0.9).astype(np.int16))
 
-cues = json.load(open(f'{D}/cues.json'))
-TOTAL = float(json.load(open(f'{D}/total.json')))
+import sys
+pre = sys.argv[1] if len(sys.argv) > 1 else ''
+cues = json.load(open(f'{D}/{pre}cues.json'))
+TOTAL = float(json.load(open(f'{D}/{pre}total.json')))
 mix = np.zeros((int(TOTAL * SR) + SR * 3, 2))
 for c in cues:
     s = BANK[c['sfx']] * LEVEL[c['sfx']] * c['gain']
@@ -110,4 +112,4 @@ for c in cues:
 mix = mix[:int(TOTAL * SR)]
 peak = np.abs(mix).max(); print('peak', round(float(peak), 3), 'cues', len(cues))
 if peak > 0.95: mix *= 0.95 / peak
-wavfile.write(f'{D}/sfx-track.wav', SR, (mix * 32767).astype(np.int16))
+wavfile.write(f'{D}/{pre}sfx-track.wav', SR, (mix * 32767).astype(np.int16))

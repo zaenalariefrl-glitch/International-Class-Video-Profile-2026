@@ -82,7 +82,7 @@ const LOGO = '../assets/logos/lambang-unikal.png';
 
 /* ======================== DATA (semua teks layar di sini) ======================== */
 const SCENES = [
-  { type: 'open', dur: 14 },
+  { type: 'open', dur: 19 },
 
   // RAISA · MODERATOR (45 dtk)
   { type: 'card', dur: 9, wm: 'Moderator', kick: 'The Moderator', name: 'Raisa <em>Alatas</em>',
@@ -158,7 +158,7 @@ const SCENES = [
     main: { src: 'laela/my6.jpg', w: 450, h: 600, cap: 'MILA University', x: 1060, y: 120, r: -2, pos: '50% 35%' },
     clip: { src: 'laela/my10.jpg', w: 330, h: 440, x: 1500, y: 470, r: 3, print: true, cap: 'Kuala Lumpur' } },
 
-  { type: 'close', dur: 31.5 }
+  { type: 'close', dur: 18 }
 ];
 
 /* ======================== BUILD ======================== */
@@ -193,7 +193,7 @@ SCENES.forEach((s, i) => {
   if (s.type === 'open') {
     // COLD OPEN 0 sampai 3 dtk: montase cepat + kata besar
     const blk = el('div', 'blk'); const mont = el('div', 'mont'); const flash = el('div', 'flash');
-    const MONT = ['laela/my6.jpg', 'erick/act3.jpg', 'lucy/ise2.jpg', 'lucy/loose2.jpg', 'raisa/act2.jpg', 'laela/my10.jpg'];
+    const MONT = ['laela/my6.jpg', 'erick/act3.jpg', 'lucy/ise2.jpg', 'lucy/loose2.jpg', 'raisa/act2.jpg', 'laela/my10.jpg', 'lucy/bb3.jpg', 'erick/act5.jpg', 'laela/p2mw4.jpg', 'raisa/act1.jpg', 'erick/act6.jpg', 'laela/etc5.jpg'];
     const fr = MONT.map(src => { const im = el('img'); im.src = M + src; mont.append(im); return im; });
     const veil = el('div', 'mveil'); mont.append(veil);
     const WORDS = ['Four <em>stories.</em>', 'One <em>class.</em>', 'No <em>borders.</em>'];
@@ -212,34 +212,39 @@ SCENES.forEach((s, i) => {
     tl.set(b, { visibility: 'visible' }, T);
     tl.set(blk, { opacity: 1 }, T); tl.set(mont, { opacity: 1 }, T);
     gsap.set(fr, { opacity: 0 }); gsap.set(ws, { opacity: 0 }); gsap.set(logo, { opacity: 0 });
-    cue(T + 0.3, 'riser', 0.9);
-    const STEP = 0.36, M0 = 0.45;
+    cue(T + 0.6, 'riser_long', 0.9);
+    const STEP = 0.5, M0 = 0.6;
     fr.forEach((im, j) => {
       const at = T + M0 + j * STEP;
       tl.set(im, { opacity: 1 }, at); tl.fromTo(im, { scale: 1.16 }, { scale: 1.02, duration: STEP + .1, ease: 'power2.out' }, at);
-      if (j < fr.length - 1) tl.set(im, { opacity: 0 }, at + STEP);
+      tl.set(im, { opacity: 0 }, at + STEP);
       tl.fromTo(flash, { opacity: .45 }, { opacity: 0, duration: .22, ease: 'power2.out' }, at);
       cue(at, 'shutter', 0.45);
     });
     tl.set(blk, { opacity: 0 }, T + M0 - 0.01);
     ws.forEach((w, j) => {
-      const at = T + M0 + j * STEP * 2;
+      const at = T + M0 + j * STEP * 4;
       tl.fromTo(w, { opacity: 0, scale: 1.18, filter: 'blur(12px)' }, { opacity: 1, scale: 1, filter: 'blur(0px)', duration: .28, ease: 'power3.out' }, at);
-      if (j < ws.length - 1) tl.to(w, { opacity: 0, duration: .12 }, at + STEP * 2 - .12);
+      tl.to(w, { opacity: 0, duration: .15 }, at + STEP * 4 - .15);
     });
-    const END = T + M0 + fr.length * STEP;      // sekitar 2,6 dtk
+    // kilatan makin cepat sebelum hentakan
+    let q = T + M0 + fr.length * STEP; const QS = [0.2, 0.17, 0.14, 0.12, 0.1, 0.09, 0.08, 0.07];
+    QS.forEach((d, j) => { const im = fr[(j * 5) % fr.length];
+      tl.set(im, { opacity: 1 }, q); tl.set(im, { opacity: 0 }, q + d);
+      tl.fromTo(flash, { opacity: .55 }, { opacity: 0, duration: d, ease: 'none' }, q); cue(q, 'shutter', 0.35); q += d; });
+    const END = q;      // sekitar 7,6 dtk
     tl.set(blk, { opacity: 1 }, END); tl.set(mont, { opacity: 0 }, END);
-    const HIT = T + 3.0;
+    const HIT = T + 8.0;
     cue(HIT, 'impact'); cue(HIT + 0.25, 'shimmer', 0.9);
     tl.fromTo(logo, { opacity: 0, scale: 1.9, filter: 'blur(14px)' }, { opacity: 1, scale: 1, filter: 'blur(0px)', duration: .7, ease: 'expo.out' }, HIT);
     tl.fromTo(burst, { opacity: .95, scale: .2 }, { opacity: 0, scale: 2.6, duration: 1.8, ease: 'expo.out', immediateRender: false }, HIT + .05);
     tl.fromTo(ring, { opacity: 1, scale: .25 }, { opacity: 0, scale: 3.2, duration: 1.4, ease: 'power2.out', immediateRender: false }, HIT + .05);
     tl.to(blk, { opacity: 0, duration: 1.4, ease: 'power2.out' }, HIT + .1);
     tl.fromTo(logo, { y: 0 }, { y: -10, duration: 5, ease: 'sine.inOut', yoyo: true, repeat: 2 }, HIT + 1.4);
-    [k, h, sub].forEach((e, j) => tl.fromTo(e, { opacity: 0, y: 24, filter: 'blur(8px)' }, { opacity: 1, y: 0, filter: 'blur(0px)', duration: 1.6, ease: 'power3.out' }, T + 5.0 + j * 0.9));
-    cue(T + 5.0, 'swell', 0.7);
-    tl.to(r, { width: 420, duration: 2.2, ease: 'power2.inOut' }, T + 8.0); cue(T + 8.0, 'whoosh_soft', 0.6);
-    tl.fromTo(meet, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 1.6, ease: 'power2.out' }, T + 9.6);
+    [k, h, sub].forEach((e, j) => tl.fromTo(e, { opacity: 0, y: 24, filter: 'blur(8px)' }, { opacity: 1, y: 0, filter: 'blur(0px)', duration: 1.6, ease: 'power3.out' }, T + 10.0 + j * 0.9));
+    cue(T + 10.0, 'swell', 0.7);
+    tl.to(r, { width: 420, duration: 2.2, ease: 'power2.inOut' }, T + 13.0); cue(T + 13.0, 'whoosh_soft', 0.6);
+    tl.fromTo(meet, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 1.6, ease: 'power2.out' }, T + 14.6);
     tl.fromTo(brand, { opacity: 0 }, { opacity: 1, duration: 1.5 }, T + s.dur - 2);
   }
 
@@ -302,20 +307,7 @@ SCENES.forEach((s, i) => {
     // kalimat motivasi bertahap
     const LINES = ['Four different <em>paths.</em>', 'One international <em>classroom.</em>', 'Your story <em>starts here.</em>'];
     const ls = LINES.map((txt, j) => { const p = el('p', 'mline' + (j === 2 ? ' strong' : ''), txt); b.append(p); return p; });
-    // puncak: Learning Without Borders
-    const c3 = el('div', 'center');
-    const lg = el('img'); lg.src = LOGO; lg.style.width = '150px';
-    const h = el('h2', 'hero', 'Learning <em>Without Borders</em>'); h.style.fontSize = '128px';
-    const r3 = el('div', 'rule');
-    c3.append(lg, h, r3); b.append(c3);
-    const burst = el('div', 'burst'); b.append(burst);
-    // aba aba moderator
-    const c2 = el('div', 'center');
-    const rp = print({ src: 'raisa/pro_close.jpg', pos: '50% 50%', w: 360, h: 470, cap: 'Raisa, 2026' }); Object.assign(rp.style, { position: 'relative', left: 'auto', top: 'auto' });
-    const k2 = el('p', 'kick', 'Please welcome our moderator'); k2.style.marginTop = '56px';
-    const n2 = el('h2', 'name', 'Raisa <em>Alatas</em>');
-    c2.append(rp, k2, n2); b.append(c2);
-    gsap.set([...ls, lg, h, rp, k2, n2], { opacity: 0 });
+    gsap.set(ls, { opacity: 0 });
 
     ps.forEach((p, j) => { cue(T + 1.2 + j * 0.8, 'drop', 0.85);
       tl.fromTo(p, { opacity: 0, y: -120, scale: 1.1 }, { opacity: 1, y: 0, scale: 1, duration: 1.6, ease: 'expo.out' }, T + 1.0 + j * 0.8); });
@@ -330,20 +322,8 @@ SCENES.forEach((s, i) => {
     cue(T + 11.0, 'whoosh', 0.6); cue(T + 12.8, 'drop', 0.7);
     tl.fromTo(ls[2], { opacity: 0, scale: .92, filter: 'blur(12px)' }, { opacity: 1, scale: 1, filter: 'blur(0px)', duration: 2.0, ease: 'expo.out' }, T + 13.0);
     cue(T + 13.0, 'shimmer'); cue(T + 13.0, 'swell', 0.6);
-    tl.to([...ps, ls[2]], { opacity: 0, filter: 'blur(12px)', duration: 1.3, ease: 'power2.in', stagger: .05 }, T + 17.0);
-    // puncak
-    const HIT = T + 18.4;
-    cue(HIT, 'impact', 0.75); cue(HIT + 0.2, 'swell', 0.85);
-    tl.fromTo(burst, { opacity: .8, scale: .2 }, { opacity: 0, scale: 2.4, duration: 2.0, ease: 'expo.out', immediateRender: false }, HIT);
-    tl.fromTo(lg, { opacity: 0, scale: 1.5, filter: 'blur(10px)' }, { opacity: 1, scale: 1, filter: 'blur(0px)', duration: 1.0, ease: 'expo.out' }, HIT);
-    tl.fromTo(h, { opacity: 0, letterSpacing: '0.12em', filter: 'blur(12px)' }, { opacity: 1, letterSpacing: '-0.03em', filter: 'blur(0px)', duration: 2.4, ease: 'expo.out' }, HIT + 0.4);
-    tl.to(r3, { width: 520, duration: 2.2, ease: 'power2.inOut' }, HIT + 1.2);
-    tl.to([lg, h, r3], { opacity: 0, filter: 'blur(10px)', duration: 1.2, ease: 'power2.in' }, T + 23.6);
-    // aba aba moderator, frame terakhir diam di backdrop
-    tl.fromTo(rp, { opacity: 0, y: -80, scale: 1.08 }, { opacity: 1, y: 0, scale: 1, duration: 1.8, ease: 'expo.out' }, T + 24.8);
-    tl.fromTo(k2, { opacity: 0, filter: 'blur(8px)' }, { opacity: 1, filter: 'blur(0px)', duration: 1.5 }, T + 26.0);
-    tl.fromTo(n2, { opacity: 0, filter: 'blur(8px)', y: 14 }, { opacity: 1, filter: 'blur(0px)', y: 0, duration: 1.6 }, T + 26.8);
-    cue(T + 25.0, 'drop'); cue(T + 26.8, 'shimmer');
+    // berhenti di "Your story starts here." lalu masuk dokumenter (fade di tahap penggabungan)
+    tl.to(ps, { y: '+=10', duration: 4, ease: 'sine.inOut' }, T + 13.2);
   }
 
   // masuk dan keluar: geser horizontal

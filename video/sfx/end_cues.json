@@ -1,0 +1,82 @@
+[
+ {
+  "t": 0.2,
+  "sfx": "riser",
+  "gain": 0.9
+ },
+ {
+  "t": 0.4,
+  "sfx": "shutter",
+  "gain": 0.4
+ },
+ {
+  "t": 0.95,
+  "sfx": "shutter",
+  "gain": 0.4
+ },
+ {
+  "t": 1.43,
+  "sfx": "shutter",
+  "gain": 0.4
+ },
+ {
+  "t": 1.83,
+  "sfx": "shutter",
+  "gain": 0.4
+ },
+ {
+  "t": 2.17,
+  "sfx": "shutter",
+  "gain": 0.4
+ },
+ {
+  "t": 2.45,
+  "sfx": "shutter",
+  "gain": 0.4
+ },
+ {
+  "t": 2.67,
+  "sfx": "shutter",
+  "gain": 0.4
+ },
+ {
+  "t": 2.84,
+  "sfx": "shutter",
+  "gain": 0.4
+ },
+ {
+  "t": 2.97,
+  "sfx": "shutter",
+  "gain": 0.4
+ },
+ {
+  "t": 3.07,
+  "sfx": "shutter",
+  "gain": 0.4
+ },
+ {
+  "t": 3.6,
+  "sfx": "impact",
+  "gain": 1
+ },
+ {
+  "t": 4.35,
+  "sfx": "impact",
+  "gain": 0.8
+ },
+ {
+  "t": 4.45,
+  "sfx": "swell",
+  "gain": 0.9
+ },
+ {
+  "t": 4.55,
+  "sfx": "shimmer",
+  "gain": 1
+ },
+ {
+  "t": 5.95,
+  "sfx": "whoosh_soft",
+  "gain": 0.5
+ }
+]

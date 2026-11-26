@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>International Class 2026 · Ending</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Geist:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root { --navy: #09153f; --navy2: #122a5e; --gold: #e9c546; --cream: #f6f1e6; --soft: #c3cbe0;
+          --serif: "Fraunces", Georgia, serif; --sans: "Geist", system-ui, sans-serif; }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { background: #000; }
+  #stage { position: relative; width: 1920px; height: 1080px; overflow: hidden; color: var(--cream); font-family: var(--sans);
+    background: radial-gradient(70% 60% at 50% 45%, var(--navy2), var(--navy) 60%, #030714); }
+  .layer { position: absolute; inset: 0; }
+  .mont img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; }
+  .mveil { position: absolute; inset: 0; background: radial-gradient(70% 70% at 50% 50%, rgba(9,21,63,.3), rgba(3,7,20,.75)); }
+  .flash { background: #fff; opacity: 0; }
+  .blk { background: #000; }
+  .burst { position: absolute; left: 50%; top: 46%; width: 1300px; height: 1300px; margin: -650px 0 0 -650px; border-radius: 50%; opacity: 0;
+    background: radial-gradient(circle, rgba(255,236,160,.85) 0%, rgba(233,197,70,.4) 25%, rgba(233,197,70,0) 62%); }
+  .ring { position: absolute; left: 50%; top: 46%; width: 420px; height: 420px; margin: -210px 0 0 -210px; border-radius: 50%; border: 3px solid var(--gold); opacity: 0; }
+  .center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+  .w1 { font: 500 230px/0.9 var(--serif); letter-spacing: -.03em; color: #fff; }
+  .w2 { margin-top: 10px; font: italic 400 150px/0.95 var(--serif); letter-spacing: -.02em; color: var(--gold); }
+  .rule { width: 0; height: 2px; background: var(--gold); margin: 44px auto 0; }
+  .meta { margin-top: 34px; display: flex; align-items: center; gap: 22px; font: 600 24px var(--sans); letter-spacing: .28em; text-transform: uppercase; color: var(--soft); }
+  .meta img { width: 70px; }
+  .meta b { color: var(--gold); font-weight: 600; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div class="layer mont" id="mont"><div class="mveil"></div></div>
+  <div class="layer flash" id="flash"></div>
+  <div class="burst" id="burst"></div><div class="ring" id="ring"></div>
+  <div class="center">
+    <p class="w1" id="w1">LEARNING</p>
+    <p class="w2" id="w2">Without Borders</p>
+    <div class="rule" id="rule"></div>
+    <div class="meta" id="meta"><img src="../assets/logos/lambang-unikal.png" alt=""><span>International Class <b>·</b> Management <b>·</b> Universitas Pekalongan</span></div>
+  </div>
+  <div class="layer blk" id="blk"></div>
+</div>
+<script src="gsap.min.js"></script>
+<script>
+const M = '../media/work/';
+const PICS = ['lucy/bb3.jpg', 'laela/my6.jpg', 'erick/act3.jpg', 'raisa/act2.jpg', 'lucy/loose2.jpg', 'laela/p2mw4.jpg', 'erick/act5.jpg', 'lucy/ise2.jpg', 'raisa/act1.jpg', 'laela/my10.jpg'];
+const mont = document.getElementById('mont');
+const imgs = PICS.map(p => { const i = document.createElement('img'); i.src = M + p; mont.insertBefore(i, mont.lastChild); return i; });
+const $ = id => document.getElementById(id);
+const tl = gsap.timeline({ paused: true });
+const cues = []; const cue = (t, sfx, gain = 1) => cues.push({ t: +t.toFixed(3), sfx, gain });
+
+gsap.set(['#w1', '#w2', '#meta'], { opacity: 0 });
+// 0 sampai 3,6 dtk: kilatan foto makin cepat dari layar hitam
+tl.to('#blk', { opacity: 0, duration: .3 }, 0.2);
+cue(0.2, 'riser', 0.9);
+let q = 0.4; const D = [0.55, 0.48, 0.4, 0.34, 0.28, 0.22, 0.17, 0.13, 0.1, 0.08];
+imgs.forEach((im, j) => { tl.set(im, { opacity: 1 }, q); tl.fromTo(im, { scale: 1.14 }, { scale: 1.02, duration: D[j] + .05, ease: 'power2.out' }, q);
+  tl.set(im, { opacity: 0 }, q + D[j]); tl.fromTo('#flash', { opacity: .5 }, { opacity: 0, duration: Math.min(.2, D[j]), ease: 'none' }, q);
+  cue(q, 'shutter', 0.4); q += D[j]; });
+tl.set('#blk', { opacity: 1 }, q);                     // hitam, tahan napas
+const H1 = q + 0.45, H2 = H1 + 0.75;
+// hentakan 1: LEARNING
+cue(H1, 'impact');
+tl.set('#blk', { opacity: 0 }, H1);
+tl.fromTo('#w1', { opacity: 0, scale: 1.6, filter: 'blur(16px)', letterSpacing: '0.2em' }, { opacity: 1, scale: 1, filter: 'blur(0px)', letterSpacing: '-0.03em', duration: .6, ease: 'expo.out' }, H1);
+tl.fromTo('#ring', { opacity: 1, scale: .3 }, { opacity: 0, scale: 3.4, duration: 1.3, ease: 'power2.out', immediateRender: false }, H1);
+// hentakan 2: Without Borders
+cue(H2, 'impact', 0.8); cue(H2 + 0.2, 'shimmer'); cue(H2 + 0.1, 'swell', 0.9);
+tl.fromTo('#w2', { opacity: 0, y: 40, filter: 'blur(14px)' }, { opacity: 1, y: 0, filter: 'blur(0px)', duration: .9, ease: 'expo.out' }, H2);
+tl.fromTo('#burst', { opacity: .9, scale: .2 }, { opacity: 0, scale: 2.6, duration: 2.2, ease: 'expo.out', immediateRender: false }, H2);
+tl.to('#rule', { width: 640, duration: 2.0, ease: 'power2.inOut' }, H2 + 0.8);
+tl.fromTo('#meta', { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 1.4, ease: 'power2.out' }, H2 + 1.6);
+cue(H2 + 1.6, 'whoosh_soft', 0.5);
+// pelan membesar lalu fade ke hitam
+tl.fromTo('.center', { scale: 1 }, { scale: 1.04, duration: 6, ease: 'none' }, H2);
+const OUT = H2 + 5.6;
+tl.to('#blk', { opacity: 1, duration: 1.8, ease: 'power2.inOut' }, OUT);
+const TOTAL = +(OUT + 2.4).toFixed(2);
+tl.set({}, {}, TOTAL);
+window.__tl = tl; window.__total = TOTAL; window.__cues = cues.sort((a, b) => a.t - b.t);
+</script>
+</body>
+</html>

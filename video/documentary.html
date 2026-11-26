@@ -46,8 +46,8 @@
    tanpa parameter          → mode capture, dikendalikan lewat window.__seek(t). */
 const LIVE = new URLSearchParams(location.search).has('live');
 const CLIPS = ['c01','c02','c03','c04','c05','c06','c08','c09','c10','c11'];   // c07 dihapus atas permintaan Jen
-const SLOT = 3;            // detik tiap klip menjadi klip aktif
-const MOVE = 0.9;           // durasi geser carousel
+const SLOT = 4.5;            // detik tiap klip menjadi klip aktif
+const MOVE = 1.0;           // durasi geser carousel
 const N = CLIPS.length, LOOP = N * SLOT;
 const CX = 1250, CY = 540, GAP = 44, BIG = 440, SMALL = 290, S = SMALL / BIG;
 

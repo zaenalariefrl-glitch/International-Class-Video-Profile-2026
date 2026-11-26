@@ -71,3 +71,11 @@
 - Video utama dipercepat: maksimal 3 dtk diam setelah animasi terakhir tiap adegan. Durasi 2:37 (157,1 dtk). Item daftar muncul tiap 1,8 dtk.
 - Dokumenter: klip c07 (pria berjalan, "Creative people with deadlines be like") dihapus. Tiap klip 3 dtk, geser 0,9 dtk. Satu putaran 30 dtk.
 - Output akhir satu file: video utama + fade 0,8 dtk + dokumenter, ukuran di bawah 100 MB (encode dua tahap).
+
+## Revisi versi 2 gabungan
+- Aba aba "Please welcome our moderator" DIHAPUS.
+- Cold open diperpanjang: montase 12 foto 0,5 dtk dengan "Four stories." "One class." "No borders.", kilatan makin cepat, hitam, lambang menghentak di 8 dtk. Adegan pembuka 19 dtk.
+- Penutup video utama berhenti di "Your story starts here." (18 dtk), lalu fade ke dokumenter.
+- Dokumenter 4,5 dtk per klip (10 klip, 45 dtk).
+- Ending dramatis baru (video/ending.html, 12,4 dtk): kilatan foto makin cepat, hitam, LEARNING menghentak, Without Borders menghentak dengan cahaya emas, lambang dan identitas program, fade ke hitam.
+- Urutan file akhir: video utama (2:28,6) + dokumenter (0:45) + ending (0:12,4), fade 0,8 dtk antarbagian, di bawah 100 MB.
