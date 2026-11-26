@@ -30,7 +30,9 @@
 - Fungsi: diputar di backdrop sebagai pembuka sesi talkshow, memperkenalkan moderator dan narasumber.
 - Urutan: Pembuka, Raisa (The Moderator), Lucy (Speaker 01), Erick (Speaker 02), Laela (Speaker 03), Penutup dengan aba-aba masuk moderator.
 - Adegan Tema acara DIHAPUS.
-- Durasi target sekitar 2 menit. Bagian Raisa lebih pendek (sekitar 18 dtk), tiap narasumber sekitar 25 dtk.
+- Durasi total sekitar 5 menit (300 dtk). Tempo lambat, tidak terburu buru.
+- Frame rate 60 fps. Gerak halus: easing sine dan expo out, zoom pelan terus menerus, transisi geser 1,2 sampai 1,6 dtk, tidak ada potongan mendadak.
+- Pembagian waktu: Pembuka 20 dtk, Raisa 45 dtk (A 18, B 27), tiap narasumber 70 dtk (A 18, B 27, C 25), Penutup dan aba aba 25 dtk.
 - Audio: TANPA musik untuk sekarang. Hanya efek suara (whoosh geser adegan, foto jatuh, shutter, dsb).
 - Teks layar: "Timor Leste" ditulis tanpa tanda hubung.
 - **ATURAN: JANGAN render video (MP4) sebelum Jen memberi perintah.**
@@ -38,9 +40,9 @@
 ### Draf storyboard
 | # | Adegan | Durasi | Isi |
 |---|---|---|---|
-| 1 | Pembuka | 8 dtk | Lambang UNIKAL, "International Class", "Management, Universitas Pekalongan" |
-| 3 | The Moderator: Raisa Alatas | 18 dtk | Kartu nama, sorotan: Best Academic Performance 2025/2026, Kalasin University Thailand, Head of Clothing Rooang Karya |
-| 4 | Speaker 01: Luciana Lelihoo Madeira | 25 dtk | International Student from Timor Leste, ISE 2025, Beyond Borders, Juara 1 Baca Puisi BIPA FHI 2026 |
-| 5 | Speaker 02: Erick Kurniawan Syah | 25 dtk | Exchange UBD, InnovFest UBD, Student Innovative 2024 |
-| 6 | Speaker 03: Laela | 25 dtk | Malaysia, P2MW 2026 (menunggu CV) |
-| 7 | Penutup + aba-aba | 12 dtk | Empat polaroid berkumpul, "Learning Without Borders", lalu "Please welcome our moderator / Raisa Alatas". Frame terakhir diam di backdrop saat Raisa masuk |
+| 1 | Pembuka | 20 dtk | Lambang UNIKAL, "International Class", "Management, Universitas Pekalongan" |
+| 3 | The Moderator: Raisa Alatas | 45 dtk | Kartu nama, sorotan: Best Academic Performance 2025/2026, Kalasin University Thailand, Head of Clothing Rooang Karya |
+| 4 | Speaker 01: Luciana Lelihoo Madeira | 70 dtk | International Student from Timor Leste, ISE 2025, Beyond Borders, Juara 1 Baca Puisi BIPA FHI 2026 |
+| 5 | Speaker 02: Erick Kurniawan Syah | 70 dtk | Exchange UBD, InnovFest UBD, Student Innovative 2024 |
+| 6 | Speaker 03: Laela | 70 dtk | Malaysia, P2MW 2026 (menunggu CV) |
+| 7 | Penutup + aba-aba | 25 dtk | Empat polaroid berkumpul, "Learning Without Borders", lalu "Please welcome our moderator / Raisa Alatas". Frame terakhir diam di backdrop saat Raisa masuk |

@@ -1,5 +1,6 @@
 # Storyboard Perkenalan 4 Orang (Video Utama)
 
+Format 1920x1080, 60 fps, total video sekitar 5 menit. Timing per beat di bawah adalah versi lama dan akan diperpanjang: Raisa 45 dtk (A 18, B 27), narasumber 70 dtk (A 18, B 27, C 25).
 Format 1920x1080, palet E2, tanpa musik, hanya efek suara (SFX). Teks layar bahasa Inggris, tanpa tanda hubung.
 Pola tiap orang: Beat A kartu nama, Beat B sorotan kegiatan, Beat C (khusus narasumber) pencapaian utama, lalu transisi geser.
 Tagline Beat B (Leading with purpose, Bridging cultures, Building ideas into ventures) DISETUJUI Jen.
@@ -78,7 +79,7 @@ Teks    : *Building* ideas into ventures.
           Student Innovative
             Business Plan Participant, 2024
           Innovation Festival (InnovFest)
-            Universiti Brunei Darussalam [VERIFY peran: peserta atau presenter?]
+            Universiti Brunei Darussalam, Participant
 SFX     : whoosh, kertas jatuh berurutan
 
 ### Beat 3C · Pencapaian utama (0:16 sampai 0:25)
