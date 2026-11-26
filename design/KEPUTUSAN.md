@@ -28,7 +28,8 @@
 
 ## Video Utama (pembuka talkshow)
 - Fungsi: diputar di backdrop sebagai pembuka sesi talkshow, memperkenalkan moderator dan narasumber.
-- Urutan: Pembuka, Tema acara, Raisa (The Moderator), Lucy (Speaker 01), Erick (Speaker 02), Laela (Speaker 03), Penutup.
+- Urutan: Pembuka, Raisa (The Moderator), Lucy (Speaker 01), Erick (Speaker 02), Laela (Speaker 03), Penutup dengan aba-aba masuk moderator.
+- Adegan Tema acara DIHAPUS.
 - Durasi target sekitar 2 menit. Bagian Raisa lebih pendek (sekitar 18 dtk), tiap narasumber sekitar 25 dtk.
 - Audio: TANPA musik untuk sekarang. Hanya efek suara (whoosh geser adegan, foto jatuh, shutter, dsb).
 - Teks layar: "Timor Leste" ditulis tanpa tanda hubung.
@@ -38,9 +39,8 @@
 | # | Adegan | Durasi | Isi |
 |---|---|---|---|
 | 1 | Pembuka | 8 dtk | Lambang UNIKAL, "International Class", "Management, Universitas Pekalongan" |
-| 2 | Tema acara | 6 dtk | Judul sesi atau tagline (menunggu dari Jen) |
 | 3 | The Moderator: Raisa Alatas | 18 dtk | Kartu nama, sorotan: Best Academic Performance 2025/2026, Kalasin University Thailand, Head of Clothing Rooang Karya |
 | 4 | Speaker 01: Luciana Lelihoo Madeira | 25 dtk | International Student from Timor Leste, ISE 2025, Beyond Borders, Juara 1 Baca Puisi BIPA FHI 2026 |
 | 5 | Speaker 02: Erick Kurniawan Syah | 25 dtk | Exchange UBD, InnovFest UBD, Student Innovative 2024 |
 | 6 | Speaker 03: Laela | 25 dtk | Malaysia, P2MW 2026 (menunggu CV) |
-| 7 | Penutup | 10 dtk | Empat polaroid berkumpul, "Learning Without Borders", lambang UNIKAL |
+| 7 | Penutup + aba-aba | 12 dtk | Empat polaroid berkumpul, "Learning Without Borders", lalu "Please welcome our moderator / Raisa Alatas". Frame terakhir diam di backdrop saat Raisa masuk |
