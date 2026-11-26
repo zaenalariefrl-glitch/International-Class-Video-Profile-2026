@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Learning Without Borders · Documentary</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Geist:wght@400;600&family=Geist+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root { --navy: #09153f; --gold: #e9c546; --cream: #f6f1e6; --mute: #8e98b5; --red: #e2322a;
+          --serif: "Fraunces", Georgia, serif; --sans: "Geist", system-ui, sans-serif; --mono: "Geist Mono", monospace; }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { background: #000; }
+  #stage { position: relative; width: 1920px; height: 1080px; overflow: hidden; color: var(--cream); font-family: var(--sans);
+    background: radial-gradient(60% 70% at 60% 50%, #14275c, #050a1e 75%); }
+  .bar-top, .bar-bot { position: absolute; left: 0; right: 0; height: 96px; background: #000; z-index: 10; }
+  .bar-top { top: 0; } .bar-bot { bottom: 0; }
+  .card { position: absolute; left: 0; top: 0; width: 440px; height: 782px; border-radius: 6px; overflow: hidden; background: #0d1a44;
+    transform-origin: 50% 50%; will-change: transform, opacity; }
+  .card video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .card .ring { position: absolute; inset: 0; border: 2px solid rgba(233,197,70,.7); border-radius: 6px; opacity: 0; }
+  .card .dim { position: absolute; inset: 0; background: #050a1e; opacity: .6; }
+  .copy { position: absolute; left: 100px; bottom: 150px; width: 600px; z-index: 5; }
+  .kick { font: 600 24px/1 var(--sans); letter-spacing: .26em; text-transform: uppercase; color: var(--gold); }
+  .ttl { margin-top: 22px; font: 400 92px/0.98 var(--serif); letter-spacing: -.02em; }
+  .ttl em { font-style: italic; color: var(--gold); }
+  .tc { position: absolute; left: 100px; top: 136px; z-index: 5; font: 500 22px var(--mono); color: var(--red); letter-spacing: .1em; }
+  .tc b { display: inline-block; width: 14px; height: 14px; border-radius: 50%; background: var(--red); margin-right: 12px; }
+  .prog { position: absolute; left: 100px; right: 100px; bottom: 118px; height: 3px; background: rgba(246,241,230,.15); z-index: 5; }
+  .prog span { display: block; height: 100%; width: 0; background: var(--gold); }
+  .brand { position: absolute; right: 60px; bottom: 22px; z-index: 12; display: flex; align-items: center; gap: 14px;
+    font: 600 16px var(--sans); letter-spacing: .24em; text-transform: uppercase; color: var(--mute); }
+  .brand img { width: 46px; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div class="bar-top"></div><div class="bar-bot"></div>
+  <p class="tc"><b></b><span id="tc">00:00:00:00</span></p>
+  <div class="copy"><p class="kick">Documentary</p><h2 class="ttl">Learning<br><em>Without Borders</em></h2></div>
+  <div class="prog"><span id="prog"></span></div>
+  <div class="brand"><img src="../assets/logos/lambang-unikal.png" alt="">International Class</div>
+</div>
+<script src="gsap.min.js"></script>
+<script>
+/* Mode:
+   documentary.html?live=1  → putar langsung di browser, berulang tanpa henti (untuk cek).
+   tanpa parameter          → mode capture, dikendalikan lewat window.__seek(t). */
+const LIVE = new URLSearchParams(location.search).has('live');
+const CLIPS = ['c01','c02','c03','c04','c05','c06','c07','c08','c09','c10','c11'];
+const SLOT = 10;            // detik tiap klip menjadi klip aktif
+const MOVE = 1.8;           // durasi geser carousel
+const N = CLIPS.length, LOOP = N * SLOT;
+const CX = 1250, CY = 540, GAP = 44, BIG = 440, SMALL = 290, S = SMALL / BIG;
+
+const stage = document.getElementById('stage');
+const cards = CLIPS.map((c, i) => {
+  const d = document.createElement('div'); d.className = 'card';
+  const v = document.createElement('video');
+  v.src = `../media/doc/clips/${c}.mp4`; v.muted = true; v.playsInline = true; v.loop = true; v.preload = 'auto';
+  if (LIVE) v.autoplay = true;
+  const dim = document.createElement('div'); dim.className = 'dim';
+  const ring = document.createElement('div'); ring.className = 'ring';
+  d.append(v, dim, ring); stage.append(d);
+  return { el: d, v, dim, ring };
+});
+
+// posisi tiap kartu relatif terhadap klip aktif
+function rel(i, a) { let k = ((i - a) % N + N) % N; if (k > N / 2) k -= N; return k; }
+function pose(k) {
+  const off = BIG / 2 + GAP + SMALL / 2, step = SMALL + GAP;
+  let x = k === 0 ? CX : CX + Math.sign(k) * (off + (Math.abs(k) - 1) * step);
+  const visible = k >= -1 && k <= 2;
+  return { x: x - BIG / 2, y: CY - 782 / 2, scale: k === 0 ? 1 : S, opacity: visible ? 1 : 0, dim: k === 0 ? 0 : .62, ring: k === 0 ? 1 : 0 };
+}
+const apply = (c, p, tl, at, dur) => {
+  const o = { x: p.x, y: p.y, scale: p.scale, opacity: p.opacity };
+  if (tl) { tl.to(c.el, { ...o, duration: dur, ease: 'power3.inOut' }, at); tl.to(c.dim, { opacity: p.dim, duration: dur }, at); tl.to(c.ring, { opacity: p.ring, duration: dur }, at); }
+  else { gsap.set(c.el, o); gsap.set(c.dim, { opacity: p.dim }); gsap.set(c.ring, { opacity: p.ring }); }
+};
+
+const tl = gsap.timeline({ paused: !LIVE, repeat: LIVE ? -1 : 0 });
+cards.forEach((c, i) => apply(c, pose(rel(i, 0))));
+for (let s = 1; s <= N; s++) {
+  const at = s * SLOT - MOVE, a = s % N, prev = (s - 1) % N;
+  cards.forEach((c, i) => {
+    const k0 = rel(i, prev), k1 = rel(i, a);
+    if (Math.abs(k1 - k0) === 1) apply(c, pose(k1), tl, at, MOVE);
+    else tl.set(c.el, { ...pose(k1), opacity: 0 }, at + MOVE);   // pindah sisi saat tak terlihat
+  });
+}
+// garis progres per klip
+for (let s = 0; s < N; s++) tl.fromTo('#prog', { width: '0%' }, { width: '100%', duration: SLOT, ease: 'none' }, s * SLOT);
+tl.set({}, {}, LOOP);
+
+const tcEl = document.getElementById('tc');
+const fmt = t => { const f = Math.floor((t % 1) * 30), s = Math.floor(t); const p = n => String(n).padStart(2, '0');
+  return `${p(Math.floor(s / 3600))}:${p(Math.floor(s / 60) % 60)}:${p(s % 60)}:${p(f)}`; };
+tl.eventCallback('onUpdate', () => { tcEl.textContent = fmt(tl.totalTime()); });
+
+// waktu video tiap klip: mulai dari awal saat klip bergeser ke tengah, lalu berulang
+function videoTime(i, t) {
+  const start = i * SLOT - MOVE;              // klip i mulai menuju tengah
+  const local = (((t - start) % LOOP) + LOOP) % LOOP;
+  const d = cards[i].v.duration || 1; return local % d;
+}
+if (LIVE) {
+  // putar klip dari awal setiap kali menjadi aktif
+  for (let s = 0; s < N; s++) tl.call(() => { const v = cards[s].v; v.currentTime = 0; v.play(); }, null, Math.max(0, s * SLOT - MOVE));
+  tl.play();
+}
+window.__seek = async t => {
+  tl.seek(t % LOOP, false); tcEl.textContent = fmt(t);
+  await Promise.all(cards.map((c, i) => new Promise(res => {
+    if (c.v.readyState < 1) { c.v.addEventListener('loadedmetadata', () => { c.v.currentTime = videoTime(i, t); c.v.addEventListener('seeked', res, { once: true }); }, { once: true }); return; }
+    c.v.currentTime = videoTime(i, t); c.v.addEventListener('seeked', res, { once: true });
+  })));
+};
+window.__loop = LOOP;
+</script>
+</body>
+</html>

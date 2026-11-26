@@ -53,3 +53,9 @@
 - Tiap kartu nama punya satu kalimat bio, tiap pengalaman dan pencapaian punya deskripsi singkat. Semua dari isi CV, tanpa tambahan klaim.
 - Lucy di Beyond Borders 2026: ditulis "Represented Timor Leste" sesuai CV (bukan "Speaker").
 - Raisa: ditambah item Community Service Project (PKM Ikan Asap 2026) dari CV, cocok dengan video kegiatannya.
+
+## Video Dokumenter (diputar di backdrop selama talkshow)
+- 11 klip dari Jen (disimpan di media/doc, tidak di-commit). Dikonversi ke H.264 720x1280 tanpa audio. Klip lanskap c06 diisi latar blur.
+- Semua klip MUTE. Tiap klip berulang (loop) dan tidak pernah berhenti, carousel tetap bergeser.
+- Tiap klip aktif di tengah selama 10 dtk, geser 1,8 dtk. Satu putaran penuh 110 dtk, lalu berulang mulus.
+- File: video/documentary.html (mode cek langsung: documentary.html?live=1).
