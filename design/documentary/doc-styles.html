@@ -1,0 +1,87 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Geist:wght@400;600&family=Geist+Mono:wght@500&family=Caveat:wght@500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0}
+:root{--navy:#09153f;--gold:#e9c546;--goldInk:#a8862a;--cream:#f6f1e6;--brown:#8d5c2c;--soft:#5a6482}
+.f{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:Geist,sans-serif}
+.tag{position:absolute;right:60px;top:40px;font:600 22px Geist;letter-spacing:.2em;text-transform:uppercase;z-index:5}
+.logo{position:absolute;display:flex;align-items:center;gap:16px;font:600 20px Geist;letter-spacing:.22em;text-transform:uppercase}
+.logo img{width:58px}
+.ph{background:linear-gradient(160deg,#2b4689,#16295e);position:relative;overflow:hidden}
+.ph i{position:absolute;inset:0;display:grid;place-items:center;font:italic 400 30px Fraunces;color:rgba(246,241,230,.4)}
+.kick{font:600 24px/1 Geist;letter-spacing:.26em;text-transform:uppercase}
+.ttl{font:400 112px/0.98 Fraunces;letter-spacing:-.02em}
+.ttl em{font-style:italic}
+
+/* B: Field Journal */
+#B{background:radial-gradient(60% 60% at 30% 30%,rgba(255,255,255,.18),transparent 70%),repeating-linear-gradient(35deg,rgba(0,0,0,.02) 0 2px,transparent 2px 6px),linear-gradient(180deg,#c9a878,#b48f5e);color:#2a1c0e}
+#B .tag{color:#4a3520}
+#B .card{position:absolute;background:#f8f3e8;padding:16px 16px 70px;box-shadow:0 22px 40px rgba(40,25,10,.35)}
+#B .card .ph{width:330px;height:560px}
+#B .card p{position:absolute;left:18px;bottom:16px;font:500 38px/1 Caveat;color:#2a1c0e}
+#B .tape{position:absolute;top:-22px;left:50%;width:140px;height:44px;margin-left:-70px;background:rgba(233,197,70,.55);transform:rotate(-4deg)}
+#B .note{position:absolute;left:110px;top:250px;width:620px;background:#f8f3e8;padding:60px 56px;box-shadow:0 22px 40px rgba(40,25,10,.3);transform:rotate(-1.5deg);
+ background-image:repeating-linear-gradient(180deg,transparent 0 47px,rgba(9,21,63,.12) 47px 48px)}
+#B .note .kick{color:var(--brown)}
+#B .note .ttl{margin-top:24px;color:var(--navy)} #B .note .ttl em{color:var(--brown)}
+#B .note .hand{margin-top:22px;font:500 44px/1.1 Caveat;color:#1f3a7a}
+#B .stamp{position:absolute;left:560px;top:690px;width:170px;height:170px;border:4px solid #b5342b;border-radius:50%;display:grid;place-items:center;text-align:center;color:#b5342b;font:600 20px/1.2 Geist;letter-spacing:.12em;transform:rotate(-14deg);opacity:.75}
+#B .logo{left:110px;top:90px;color:#3a2a18}
+
+/* C: Cinematic */
+#C{background:radial-gradient(60% 70% at 60% 50%,#14275c,#050a1e 75%);color:var(--cream)}
+#C:before,#C:after{content:"";position:absolute;left:0;right:0;height:96px;background:#000;z-index:4}
+#C:before{top:0}#C:after{bottom:0}
+#C .tag{color:#8e98b5;top:34px}
+#C .rail{position:absolute;top:150px;left:620px;display:flex;gap:40px;align-items:center}
+#C .rail .ph{width:290px;height:516px;opacity:.38;filter:grayscale(.4);border-radius:6px}
+#C .rail .ph.on{width:440px;height:782px;opacity:1;filter:none;box-shadow:0 40px 80px rgba(0,0,0,.6),0 0 0 2px rgba(233,197,70,.6)}
+#C .copy{position:absolute;left:100px;bottom:150px;width:540px;z-index:3}
+#C .kick{color:var(--gold)} #C .ttl{margin-top:22px;font-size:100px} #C .ttl em{color:var(--gold)}
+#C .tc{position:absolute;left:100px;top:136px;font:500 22px 'Geist Mono';color:#e2322a;letter-spacing:.1em;z-index:3}
+#C .tc b{display:inline-block;width:14px;height:14px;border-radius:50%;background:#e2322a;margin-right:12px}
+#C .bar{position:absolute;left:100px;right:100px;bottom:118px;height:3px;background:rgba(246,241,230,.15);z-index:3}
+#C .bar span{display:block;width:38%;height:100%;background:var(--gold)}
+#C .logo{right:60px;bottom:22px;z-index:5;color:#8e98b5;font-size:16px}#C .logo img{width:46px}
+
+/* D: Editorial */
+#D{background:#fbf9f4;color:var(--navy)}
+#D .tag{color:var(--soft)}
+#D .rule{position:absolute;left:0;right:0;top:170px;height:2px;background:var(--navy)}
+#D .mast{position:absolute;left:100px;top:96px;font:600 22px Geist;letter-spacing:.3em;text-transform:uppercase}
+#D .no{position:absolute;left:80px;top:180px;font:300 520px/1 Fraunces;color:rgba(233,197,70,.55);letter-spacing:-.05em}
+#D .copy{position:absolute;left:100px;top:560px;width:640px}
+#D .kick{color:var(--goldInk)} #D .ttl{margin-top:20px} #D .ttl em{color:var(--goldInk)}
+#D .sub{margin-top:24px;font:400 28px/1.5 Geist;color:var(--soft);columns:2;column-gap:36px;font-size:22px}
+#D .cols{position:absolute;left:820px;top:220px;display:flex;gap:36px}
+#D .col .ph{width:340px;height:604px}
+#D .col p{margin-top:16px;padding-top:12px;border-top:1px solid var(--navy);font:500 20px 'Geist Mono';letter-spacing:.06em}
+#D .col:nth-child(2){margin-top:90px}
+#D .logo{left:1540px;top:84px;color:var(--soft);font-size:16px}#D .logo img{width:50px}
+</style></head><body>
+
+<div class="f" id="B"><p class="tag">Opsi B · Field Journal</p>
+ <div class="logo"><img src="../../assets/logos/lambang-unikal.png">International Class</div>
+ <div class="note"><p class="kick">Documentary 01</p><h2 class="ttl">Beyond <em>Borders</em></h2><p class="hand">Dili → Pekalongan, 26 July 2026</p></div>
+ <div class="stamp">UNIKAL<br>FIELD<br>NOTES</div>
+ <div class="card" style="left:880px;top:150px;transform:rotate(3deg)"><span class="tape"></span><div class="ph"><i>klip potret</i></div><p>the forum</p></div>
+ <div class="card" style="left:1260px;top:230px;transform:rotate(-2.5deg)"><span class="tape"></span><div class="ph"><i>klip potret</i></div><p>new friends</p></div>
+ <div class="card" style="left:1640px;top:130px;transform:rotate(2deg)"><span class="tape"></span><div class="ph"><i>klip</i></div><p>together</p></div>
+</div>
+
+<div class="f" id="C"><p class="tag">Opsi C · Cinematic</p>
+ <p class="tc"><b></b>REC 00:01:24:12</p>
+ <div class="rail"><div class="ph"><i>klip</i></div><div class="ph on"><i>klip potret aktif</i></div><div class="ph"><i>klip</i></div><div class="ph"><i>klip</i></div></div>
+ <div class="copy"><p class="kick">Documentary 01</p><h2 class="ttl">Beyond <em>Borders</em></h2></div>
+ <div class="bar"><span></span></div>
+ <div class="logo"><img src="../../assets/logos/lambang-unikal.png">International Class</div>
+</div>
+
+<div class="f" id="D"><p class="tag">Opsi D · Editorial</p>
+ <p class="mast">The International Class Journal</p><div class="rule"></div>
+ <div class="logo"><img src="../../assets/logos/lambang-unikal.png"></div>
+ <p class="no">01</p>
+ <div class="copy"><p class="kick">Documentary</p><h2 class="ttl">Beyond <em>Borders</em></h2><p class="sub">An international student from Timor-Leste shares her story with students from many nations at the Untold Stories forum.</p></div>
+ <div class="cols"><div class="col"><div class="ph"><i>klip potret</i></div><p>01 · THE FORUM</p></div><div class="col"><div class="ph"><i>klip potret</i></div><p>02 · THE STORY</p></div><div class="col"><div class="ph"><i>klip</i></div><p>03 · TOGETHER</p></div></div>
+</div>
+</body></html>
