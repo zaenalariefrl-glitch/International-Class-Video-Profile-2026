@@ -2,6 +2,7 @@
 
 Format 1920x1080, palet E2, tanpa musik, hanya efek suara (SFX). Teks layar bahasa Inggris, tanpa tanda hubung.
 Pola tiap orang: Beat A kartu nama, Beat B sorotan kegiatan, Beat C (khusus narasumber) pencapaian utama, lalu transisi geser.
+Tagline Beat B (Leading with purpose, Bridging cultures, Building ideas into ventures) DISETUJUI Jen.
 Tanda [VERIFY] = perlu dikonfirmasi ke orangnya. Foto final dipilih setelah dicek visual.
 
 ---------------------------------------------------------------
