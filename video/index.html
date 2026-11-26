@@ -276,7 +276,7 @@ SCENES.forEach((s, i) => {
   t += s.dur;
 });
 tl.set({}, {}, t); // panjang total
-window.__tl = tl; window.__marks = marks; window.__total = t; window.__cues = cues.sort((a, b) => a.t - b.t);
+window.__tl = tl; window.__marks = marks; window.__total = t; window.__cues = cues.sort((a, b) => a.t - b.t); window.__scenes = SCENES;
 </script>
 </body>
 </html>
