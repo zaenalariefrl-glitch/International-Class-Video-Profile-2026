@@ -66,3 +66,8 @@
 - Cold open 0 sampai 3 dtk: montase 6 foto (0,36 dtk per foto, kilatan dan shutter) dengan kata "Four stories." "One class." "No borders.", lalu hitam, lalu lambang UNIKAL menghentak dengan cahaya emas, cincin, dan bunyi impact di 3 dtk.
 - Penutup motivasi: "Four different paths.", "One international classroom.", empat polaroid bertumpuk di tengah, "Your story starts here.", lalu "Learning Without Borders" dengan lambang dan impact, lalu aba aba moderator.
 - SFX baru: impact dan riser (sintetis).
+
+## Revisi versi gabungan (satu file)
+- Video utama dipercepat: maksimal 3 dtk diam setelah animasi terakhir tiap adegan. Durasi 2:37 (157,1 dtk). Item daftar muncul tiap 1,8 dtk.
+- Dokumenter: klip c07 (pria berjalan, "Creative people with deadlines be like") dihapus. Tiap klip 3 dtk, geser 0,9 dtk. Satu putaran 30 dtk.
+- Output akhir satu file: video utama + fade 0,8 dtk + dokumenter, ukuran di bawah 100 MB (encode dua tahap).

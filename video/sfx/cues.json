@@ -55,362 +55,362 @@
   "gain": 0.6
  },
  {
-  "t": 19.65,
+  "t": 13.65,
   "sfx": "whoosh",
   "gain": 1
  },
  {
-  "t": 21.2,
+  "t": 15.2,
   "sfx": "drop",
   "gain": 1
  },
  {
-  "t": 22.5,
+  "t": 16.5,
   "sfx": "shimmer",
   "gain": 0.55
  },
  {
-  "t": 37.65,
+  "t": 22.65,
   "sfx": "whoosh",
   "gain": 1
  },
  {
-  "t": 39.2,
+  "t": 24.2,
   "sfx": "drop",
   "gain": 0.85
  },
  {
-  "t": 40.3,
+  "t": 25.3,
   "sfx": "drop",
   "gain": 0.85
  },
  {
-  "t": 41.4,
+  "t": 26.4,
   "sfx": "drop",
   "gain": 0.85
  },
  {
-  "t": 41.6,
+  "t": 26.6,
   "sfx": "tick",
   "gain": 0.9
  },
  {
-  "t": 43,
+  "t": 28.4,
   "sfx": "tick",
   "gain": 0.9
  },
  {
-  "t": 44.4,
+  "t": 30.2,
   "sfx": "tick",
   "gain": 0.9
  },
  {
-  "t": 45.8,
+  "t": 32,
   "sfx": "tick",
   "gain": 0.9
  },
  {
-  "t": 64.65,
+  "t": 36.15,
   "sfx": "whoosh",
   "gain": 1
  },
  {
-  "t": 66.2,
+  "t": 37.7,
   "sfx": "drop",
   "gain": 1
  },
  {
-  "t": 67.5,
+  "t": 39,
   "sfx": "shimmer",
   "gain": 0.55
  },
  {
-  "t": 82.65,
+  "t": 45.15,
   "sfx": "whoosh",
   "gain": 1
  },
  {
-  "t": 84.2,
+  "t": 46.7,
   "sfx": "drop",
   "gain": 0.85
  },
  {
-  "t": 85.3,
+  "t": 47.8,
   "sfx": "drop",
   "gain": 0.85
  },
  {
-  "t": 86.4,
+  "t": 48.9,
   "sfx": "drop",
   "gain": 0.85
+ },
+ {
+  "t": 49.1,
+  "sfx": "tick",
+  "gain": 0.9
+ },
+ {
+  "t": 50,
+  "sfx": "drop",
+  "gain": 0.85
+ },
+ {
+  "t": 50.9,
+  "sfx": "tick",
+  "gain": 0.9
+ },
+ {
+  "t": 52.7,
+  "sfx": "tick",
+  "gain": 0.9
+ },
+ {
+  "t": 56.85,
+  "sfx": "whoosh",
+  "gain": 1
+ },
+ {
+  "t": 58.2,
+  "sfx": "shutter",
+  "gain": 1
+ },
+ {
+  "t": 58.4,
+  "sfx": "drop",
+  "gain": 1
+ },
+ {
+  "t": 58.7,
+  "sfx": "shimmer",
+  "gain": 1
+ },
+ {
+  "t": 60.4,
+  "sfx": "drop",
+  "gain": 0.8
+ },
+ {
+  "t": 65.85,
+  "sfx": "whoosh",
+  "gain": 1
+ },
+ {
+  "t": 67.4,
+  "sfx": "drop",
+  "gain": 1
+ },
+ {
+  "t": 68.7,
+  "sfx": "shimmer",
+  "gain": 0.55
+ },
+ {
+  "t": 74.85,
+  "sfx": "whoosh",
+  "gain": 1
+ },
+ {
+  "t": 76.4,
+  "sfx": "drop",
+  "gain": 0.85
+ },
+ {
+  "t": 77.5,
+  "sfx": "drop",
+  "gain": 0.85
+ },
+ {
+  "t": 78.6,
+  "sfx": "drop",
+  "gain": 0.85
+ },
+ {
+  "t": 78.8,
+  "sfx": "tick",
+  "gain": 0.9
+ },
+ {
+  "t": 80.6,
+  "sfx": "tick",
+  "gain": 0.9
+ },
+ {
+  "t": 84.75,
+  "sfx": "whoosh",
+  "gain": 1
+ },
+ {
+  "t": 86.1,
+  "sfx": "shutter",
+  "gain": 1
+ },
+ {
+  "t": 86.3,
+  "sfx": "drop",
+  "gain": 1
  },
  {
   "t": 86.6,
-  "sfx": "tick",
-  "gain": 0.9
- },
- {
-  "t": 87.5,
-  "sfx": "drop",
-  "gain": 0.85
- },
- {
-  "t": 88,
-  "sfx": "tick",
-  "gain": 0.9
- },
- {
-  "t": 89.4,
-  "sfx": "tick",
-  "gain": 0.9
- },
- {
-  "t": 109.65,
-  "sfx": "whoosh",
-  "gain": 1
- },
- {
-  "t": 111,
-  "sfx": "shutter",
-  "gain": 1
- },
- {
-  "t": 111.2,
-  "sfx": "drop",
-  "gain": 1
- },
- {
-  "t": 111.5,
   "sfx": "shimmer",
   "gain": 1
  },
  {
-  "t": 113.2,
+  "t": 88.3,
   "sfx": "drop",
   "gain": 0.8
  },
  {
-  "t": 134.65,
+  "t": 93.75,
   "sfx": "whoosh",
   "gain": 1
  },
  {
-  "t": 136.2,
+  "t": 95.3,
   "sfx": "drop",
   "gain": 1
  },
  {
-  "t": 137.5,
+  "t": 96.6,
   "sfx": "shimmer",
   "gain": 0.55
  },
  {
-  "t": 152.65,
+  "t": 102.75,
   "sfx": "whoosh",
   "gain": 1
  },
  {
-  "t": 154.2,
+  "t": 104.3,
   "sfx": "drop",
   "gain": 0.85
  },
  {
-  "t": 155.3,
+  "t": 105.4,
   "sfx": "drop",
   "gain": 0.85
  },
  {
-  "t": 156.4,
+  "t": 106.5,
   "sfx": "drop",
   "gain": 0.85
  },
  {
-  "t": 156.6,
+  "t": 106.7,
   "sfx": "tick",
   "gain": 0.9
  },
  {
-  "t": 158,
+  "t": 108.5,
   "sfx": "tick",
   "gain": 0.9
  },
  {
-  "t": 179.65,
+  "t": 110.3,
+  "sfx": "tick",
+  "gain": 0.9
+ },
+ {
+  "t": 112.1,
+  "sfx": "tick",
+  "gain": 0.9
+ },
+ {
+  "t": 116.25,
   "sfx": "whoosh",
   "gain": 1
  },
  {
-  "t": 181,
+  "t": 117.6,
   "sfx": "shutter",
   "gain": 1
  },
  {
-  "t": 181.2,
+  "t": 117.8,
   "sfx": "drop",
   "gain": 1
  },
  {
-  "t": 181.5,
+  "t": 118.1,
   "sfx": "shimmer",
   "gain": 1
  },
  {
-  "t": 183.2,
+  "t": 119.8,
   "sfx": "drop",
   "gain": 0.8
  },
  {
-  "t": 204.65,
+  "t": 125.25,
   "sfx": "whoosh",
   "gain": 1
  },
  {
-  "t": 206.2,
-  "sfx": "drop",
-  "gain": 1
- },
- {
-  "t": 207.5,
-  "sfx": "shimmer",
-  "gain": 0.55
- },
- {
-  "t": 222.65,
-  "sfx": "whoosh",
-  "gain": 1
- },
- {
-  "t": 224.2,
+  "t": 126.8,
   "sfx": "drop",
   "gain": 0.85
  },
  {
-  "t": 225.3,
+  "t": 127.6,
   "sfx": "drop",
   "gain": 0.85
  },
  {
-  "t": 226.4,
+  "t": 128.4,
   "sfx": "drop",
   "gain": 0.85
  },
  {
-  "t": 226.6,
-  "sfx": "tick",
-  "gain": 0.9
- },
- {
-  "t": 228,
-  "sfx": "tick",
-  "gain": 0.9
- },
- {
-  "t": 229.4,
-  "sfx": "tick",
-  "gain": 0.9
- },
- {
-  "t": 230.8,
-  "sfx": "tick",
-  "gain": 0.9
- },
- {
-  "t": 249.65,
-  "sfx": "whoosh",
-  "gain": 1
- },
- {
-  "t": 251,
-  "sfx": "shutter",
-  "gain": 1
- },
- {
-  "t": 251.2,
-  "sfx": "drop",
-  "gain": 1
- },
- {
-  "t": 251.5,
-  "sfx": "shimmer",
-  "gain": 1
- },
- {
-  "t": 253.2,
-  "sfx": "drop",
-  "gain": 0.8
- },
- {
-  "t": 274.65,
-  "sfx": "whoosh",
-  "gain": 1
- },
- {
-  "t": 276.2,
+  "t": 129.2,
   "sfx": "drop",
   "gain": 0.85
  },
  {
-  "t": 277,
-  "sfx": "drop",
-  "gain": 0.85
- },
- {
-  "t": 277.8,
-  "sfx": "drop",
-  "gain": 0.85
- },
- {
-  "t": 278.6,
-  "sfx": "drop",
-  "gain": 0.85
- },
- {
-  "t": 280,
+  "t": 129.6,
   "sfx": "whoosh_soft",
   "gain": 0.45
  },
  {
-  "t": 284.2,
+  "t": 133.2,
   "sfx": "whoosh_soft",
   "gain": 0.45
  },
  {
-  "t": 287.8,
+  "t": 136.6,
   "sfx": "whoosh",
   "gain": 0.6
  },
  {
-  "t": 289.6,
+  "t": 138.4,
   "sfx": "drop",
   "gain": 0.7
  },
  {
-  "t": 290,
+  "t": 138.6,
   "sfx": "shimmer",
   "gain": 1
  },
  {
-  "t": 290,
+  "t": 138.6,
   "sfx": "swell",
   "gain": 0.6
  },
  {
-  "t": 296.6,
+  "t": 144,
   "sfx": "impact",
   "gain": 0.75
  },
  {
-  "t": 296.8,
+  "t": 144.2,
   "sfx": "swell",
   "gain": 0.85
  },
  {
-  "t": 304.2,
+  "t": 150.6,
   "sfx": "drop",
   "gain": 1
  },
  {
-  "t": 306.2,
+  "t": 152.4,
   "sfx": "shimmer",
   "gain": 1
  }
