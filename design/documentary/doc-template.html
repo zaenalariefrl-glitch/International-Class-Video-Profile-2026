@@ -1,0 +1,43 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Geist:wght@400;600&family=Geist+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0}
+:root{--navy:#09153f;--navy2:#122a5e;--gold:#e9c546;--goldInk:#a8862a;--cream:#f6f1e6;--paper:#efe7d6;--brown:#8d5c2c;--soft:#5a6482}
+.f{position:relative;width:1920px;height:1080px;overflow:hidden;color:var(--navy);font-family:Geist,sans-serif;
+ background:radial-gradient(70% 60% at 25% 30%,rgba(255,255,255,.65),transparent 70%),repeating-linear-gradient(0deg,rgba(9,21,63,.018) 0 1px,transparent 1px 4px),linear-gradient(180deg,var(--cream),var(--paper))}
+.wm{position:absolute;left:-30px;bottom:-90px;font:italic 400 380px/0.9 Fraunces;color:rgba(9,21,63,.045);white-space:nowrap}
+.logo{position:absolute;left:110px;top:80px;display:flex;align-items:center;gap:18px;font:600 22px Geist;letter-spacing:.22em;text-transform:uppercase;color:var(--soft)}
+.logo img{width:64px}
+.copy{position:absolute;left:110px;top:300px;width:620px}
+.kick{font:600 26px/1 Geist;letter-spacing:.26em;text-transform:uppercase;color:var(--goldInk);display:flex;gap:18px;align-items:center}
+.kick:before{content:"";width:56px;height:2px;background:currentColor}
+.ttl{margin-top:30px;font:400 118px/0.98 Fraunces;letter-spacing:-.02em}
+.ttl em{font-style:italic;color:var(--goldInk)}
+.sub{margin-top:30px;font:400 30px/1.45 Geist;color:var(--soft)}
+.meta{margin-top:40px;display:flex;gap:28px;font:500 22px 'Geist Mono';color:var(--brown);letter-spacing:.06em}
+/* filmstrip */
+.strip{position:absolute;left:820px;top:110px;height:860px;display:flex;gap:0;background:var(--navy);padding:66px 26px;box-shadow:0 30px 60px rgba(9,21,63,.28);transform:rotate(-1.2deg)}
+.strip:before,.strip:after{content:"";position:absolute;left:0;right:0;height:22px;background:repeating-linear-gradient(90deg,transparent 0 22px,var(--cream) 22px 44px,transparent 44px 60px);opacity:.9}
+.strip:before{top:22px}.strip:after{bottom:22px}
+.fr{position:relative;width:410px;height:728px;margin:0 13px;background:linear-gradient(160deg,#2b4689,#16295e);overflow:hidden}
+.fr span{position:absolute;left:0;right:0;bottom:0;padding:18px;font:500 20px 'Geist Mono';color:var(--gold);letter-spacing:.08em;background:linear-gradient(transparent,rgba(9,21,63,.85))}
+.fr i{position:absolute;inset:0;display:grid;place-items:center;font:italic 400 34px Fraunces;color:rgba(246,241,230,.35)}
+.num{position:absolute;top:-52px;left:6px;font:500 18px 'Geist Mono';color:var(--gold);letter-spacing:.1em}
+.tag{position:absolute;right:60px;top:40px;font:600 22px Geist;letter-spacing:.2em;color:var(--soft);text-transform:uppercase}
+</style></head><body>
+<div class="f" id="doc">
+ <p class="tag">Contoh template dokumenter</p>
+ <p class="wm">Borders</p>
+ <div class="logo"><img src="../../assets/logos/lambang-unikal.png" alt="">International Class · Manajemen</div>
+ <div class="copy">
+  <p class="kick">Documentary 01</p>
+  <h2 class="ttl">Beyond <em>Borders</em></h2>
+  <p class="sub">An international student from Timor-Leste shares her story with students from many nations.</p>
+  <p class="meta"><span>UDC · UIN GUS DUR</span><span>26.07.2026</span></p>
+ </div>
+ <div class="strip">
+  <div class="fr"><p class="num">01A</p><i>klip potret</i><span>Forum, Untold Stories</span></div>
+  <div class="fr"><p class="num">02A</p><i>klip potret</i><span>Sharing session</span></div>
+  <div class="fr" style="margin-right:-200px"><p class="num">03A</p><i>klip potret</i><span>Group photo</span></div>
+ </div>
+</div></body></html>

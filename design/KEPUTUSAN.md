@@ -10,6 +10,9 @@
 - Tipografi: Fraunces (judul, kata kunci miring emas) + Geist (teks kecil). Diwarisi dari video portofolio Jen.
 - Peran: Raisa Alatas = Moderator. Luciana Lelihoo Madeira (Lucy), Erick Kurniawan Syah, Laela = Narasumber (Speaker).
 - Tiap orang tampil satu per satu dengan nama dan peran tertulis.
+- Ukuran semua video: 16:9, 1920x1080 (ukuran PPT), diputar di backdrop acara. VERIFY: kalau backdrop LED, cek resolusi ke vendor.
+- Video dokumenter: Jen kirim klip acak, Claude beri satu judul per video. Klip potret dalam bingkai yang bergeser seperti video portofolio.
+  Usulan template: "Rol Film" di latar krem (design/documentary/contoh-dokumenter.png), menunggu persetujuan.
 
 ## Aset
 - `assets/logos/lambang-unikal.png`: lambang UNIKAL 1484x1500, latar transparan. Dipakai di video, warna asli tidak diubah.
@@ -20,4 +23,3 @@
 - Logo lain (FEB, Unggul, Ikhlas, Diktisaintek) dikirim Jen lewat chat.
 - CV / nama lengkap Laela.
 - Foto kegiatan tambahan Raisa.
-- Konsep dan template video dokumenter pelengkap (template berbeda).
