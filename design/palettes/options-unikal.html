@@ -1,0 +1,40 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Geist:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0}
+body{background:#111}
+.f{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:Geist,sans-serif;color:var(--ink);background:var(--bg)}
+.wm{position:absolute;right:-40px;bottom:-60px;font:italic 400 420px/0.9 Fraunces;letter-spacing:-.04em;color:var(--wm);white-space:nowrap}
+.print{position:absolute;left:190px;top:170px;width:560px;padding:20px 20px 86px;background:var(--paper);transform:rotate(-2.5deg);box-shadow:0 30px 60px rgba(0,0,0,.45),0 2px 6px rgba(0,0,0,.3)}
+.ph{height:640px;background:var(--ph);display:grid;place-items:end center;overflow:hidden}
+.ph svg{width:78%}
+.cap{position:absolute;left:24px;bottom:24px;font:italic 400 36px/1 Fraunces;color:var(--capink)}
+.copy{position:absolute;left:900px;top:300px;width:880px}
+.kick{font:600 30px/1 Geist;letter-spacing:.26em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:20px}
+.kick:before{content:"";width:60px;height:2px;background:currentColor}
+.name{margin-top:34px;font:400 132px/0.98 Fraunces;letter-spacing:-.02em}
+.name em{font-style:italic;color:var(--accent)}
+.sub{margin-top:34px;font:400 34px/1.4 Geist;color:var(--soft)}
+.chip{display:inline-block;margin-top:44px;padding:16px 30px;border:2px solid var(--accent);border-radius:999px;font:600 26px/1 Geist;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.sw{position:absolute;left:900px;bottom:90px;display:flex;gap:18px;align-items:center}
+.sw i{width:70px;height:70px;border-radius:50%;border:2px solid rgba(128,128,128,.35)}
+.sw b{margin-left:18px;font:600 26px Geist;letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
+.tag{position:absolute;left:60px;top:50px;font:600 28px Geist;letter-spacing:.2em;color:var(--soft);text-transform:uppercase}
+/* textures */
+.wood{background:repeating-linear-gradient(92deg,rgba(0,0,0,.05) 0 3px,transparent 3px 11px,rgba(255,220,180,.025) 11px 13px,transparent 13px 29px),linear-gradient(180deg,var(--bg1),var(--bg2))}
+.leather{background:radial-gradient(70% 60% at 30% 30%,rgba(255,255,255,.06),transparent 70%),repeating-radial-gradient(circle at 20% 30%,rgba(0,0,0,.05) 0 2px,transparent 2px 5px),linear-gradient(160deg,var(--bg1),var(--bg2))}
+.paper{background:radial-gradient(80% 70% at 70% 20%,rgba(255,255,255,.7),transparent 70%),repeating-linear-gradient(0deg,rgba(0,0,0,.018) 0 1px,transparent 1px 4px),linear-gradient(180deg,var(--bg1),var(--bg2))}
+</style></head><body>
+<div class="f leather" id="E1" style="--bg1:#0f2257;--bg2:#09153f;--ink:#ffffff;--soft:#b8c3de;--accent:#ffde06;--paper:#ffffff;--capink:#09153f;--ph:#1d3170;--wm:rgba(255,222,6,.06)">
+ <p class="tag">Opsi E1 · UNIKAL Official</p><p class="wm">Moderator</p>
+ <div class="print"><div class="ph"><svg viewBox="0 0 100 100"><circle cx="50" cy="38" r="20" fill="#3b56a0"/><path d="M8 100c4-28 22-40 42-40s38 12 42 40z" fill="#3b56a0"/></svg></div><p class="cap">Raisa, 2026</p></div>
+ <div class="copy"><p class="kick">The Moderator</p><h2 class="name">Raisa <em>Alatas</em></h2><p class="sub">Management Student, Universitas Pekalongan</p></div>
+ <div class="sw"><i style="background:#09153f"></i><i style="background:#ffde06"></i><i style="background:#1358b7"></i><i style="background:#ffffff"></i><b>Navy logo · kuning logo · biru PMB</b></div>
+</div>
+<div class="f leather" id="E2" style="--bg1:#122a5e;--bg2:#09153f;--ink:#f6f1e6;--soft:#c3cbe0;--accent:#e9c546;--paper:#f6f1e6;--capink:#09153f;--ph:#22397a;--wm:rgba(233,197,70,.07)">
+ <p class="tag">Opsi E2 · UNIKAL Heritage</p><p class="wm">Speaker</p>
+ <div class="print"><div class="ph"><svg viewBox="0 0 100 100"><circle cx="50" cy="38" r="20" fill="#46609f"/><path d="M8 100c4-28 22-40 42-40s38 12 42 40z" fill="#46609f"/></svg></div><p class="cap">Lucy, Dili to Pekalongan</p></div>
+ <div class="copy"><p class="kick">Speaker 01</p><h2 class="name">Luciana <em>Lelihoo</em> Madeira</h2><p class="sub">International Student from Timor-Leste</p></div>
+ <div class="sw"><i style="background:#09153f"></i><i style="background:#e9c546"></i><i style="background:#f6f1e6"></i><i style="background:#c3cbe0"></i><b>Navy logo · emas turunan kuning · krem</b></div>
+</div>
+</body></html>
