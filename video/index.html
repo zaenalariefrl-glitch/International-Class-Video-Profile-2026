@@ -163,6 +163,7 @@ function copyBlock(x, y, w, children) { const c = el('div', 'copy'); Object.assi
 const tl = gsap.timeline({ paused: true });
 const brand = el('div', 'brand', `<img src="${LOGO}" alt="">International Class`); stage.append(brand);
 let t = 0; const SLIDE_IN = 1.5, SLIDE_OUT = 1.3;
+const cues = []; const cue = (time, sfx, gain = 1) => cues.push({ t: +time.toFixed(3), sfx, gain });
 const marks = [];
 
 SCENES.forEach((s, i) => {
@@ -183,10 +184,11 @@ SCENES.forEach((s, i) => {
     const meet = el('p', 'sub2', 'Meet our moderator and speakers'); meet.style.marginTop = '34px';
     c.append(logo, k, h, sub, r, meet); b.append(c);
     tl.set(b, { visibility: 'visible' }, T);
+    cue(T + 0.6, 'shimmer', 0.8); cue(T + 2.6, 'swell', 0.7);
     tl.fromTo(logo, { opacity: 0, scale: .86, filter: 'blur(10px)' }, { opacity: 1, scale: 1, filter: 'blur(0px)', duration: 2.4, ease: 'expo.out' }, T + 0.6);
     tl.fromTo(logo, { y: 0 }, { y: -10, duration: 6, ease: 'sine.inOut', yoyo: true, repeat: 2 }, T + 3);
     [k, h, sub].forEach((e, j) => tl.fromTo(e, { opacity: 0, y: 24, filter: 'blur(8px)' }, { opacity: 1, y: 0, filter: 'blur(0px)', duration: 1.6, ease: 'power3.out' }, T + 2.6 + j * 0.9));
-    tl.to(r, { width: 420, duration: 2.2, ease: 'power2.inOut' }, T + 5.6);
+    tl.to(r, { width: 420, duration: 2.2, ease: 'power2.inOut' }, T + 5.6); cue(T + 5.6, 'whoosh_soft', 0.6);
     tl.fromTo(meet, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 1.6, ease: 'power2.out' }, T + 7.2);
     tl.fromTo(brand, { opacity: 0 }, { opacity: 1, duration: 1.5 }, T + s.dur - 2);
   }
@@ -198,6 +200,7 @@ SCENES.forEach((s, i) => {
     if (s.bio) kids.push(el('p', 'bio', s.bio));
     const c = copyBlock(900, s.sub2 ? 230 : 280, 900, kids); b.append(c);
     tl.fromTo(p, { opacity: 0, y: -90, scale: 1.08 }, { opacity: 1, y: 0, scale: 1, duration: 1.6, ease: 'expo.out' }, T + 1.0);
+    cue(T + 1.2, 'drop'); cue(T + 2.5, 'shimmer', 0.55);
     tl.fromTo(p.querySelector('img'), { scale: 1.14 }, { scale: 1, duration: s.dur, ease: 'sine.out' }, T);
     tl.to(p, { y: 16, duration: 4.5, ease: 'sine.inOut', yoyo: true, repeat: Math.floor((s.dur - 3) / 4.5) }, T + 2.8);
     kids.forEach((e, j) => tl.fromTo(e, { opacity: 0, filter: 'blur(8px)', y: 14 }, { opacity: 1, filter: 'blur(0px)', y: 0, duration: 1.3, ease: 'power2.out' }, T + 1.8 + j * 0.7));
@@ -210,10 +213,12 @@ SCENES.forEach((s, i) => {
     const c = copyBlock(130, s.items.length > 3 ? 120 : 190, 780, [el('h3', 'ln', s.ln), items]); b.append(c);
     ps.forEach((p, j) => {
       tl.fromTo(p, { opacity: 0, y: -90, scale: 1.08 }, { opacity: 1, y: 0, scale: 1, duration: 1.5, ease: 'expo.out' }, T + 1.0 + j * 1.1);
+      cue(T + 1.2 + j * 1.1, 'drop', 0.85);
       tl.fromTo(p.querySelector('img'), { scale: 1.12 }, { scale: 1, duration: s.dur, ease: 'sine.out' }, T);
       tl.to(p, { y: 14, duration: 5 + j * .4, ease: 'sine.inOut', yoyo: true, repeat: Math.floor((s.dur - 6) / 5) }, T + 3 + j * 1.1);
     });
     tl.fromTo(c.querySelector('.ln'), { opacity: 0, filter: 'blur(8px)', y: 14 }, { opacity: 1, filter: 'blur(0px)', y: 0, duration: 1.5, ease: 'power2.out' }, T + 1.8);
+    [...items.children].forEach((e, j) => cue(T + 3.6 + j * 1.4, 'tick', 0.9));
     [...items.children].forEach((e, j) => tl.fromTo(e, { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: 1.2, ease: 'power2.out' }, T + 3.6 + j * 1.4));
   }
 
@@ -227,6 +232,7 @@ SCENES.forEach((s, i) => {
     const kids = [el('p', 'flag', s.flag), el('h3', 'big', s.big), el('p', 'detail', s.detail)];
     if (s.desc) kids.push(el('p', 'desc', s.desc));
     const c = copyBlock(130, 300, 820, kids); b.append(c);
+    cue(T + 1.0, 'shutter'); cue(T + 1.2, 'drop'); cue(T + 1.5, 'shimmer'); cue(T + 3.2, 'drop', 0.8);
     tl.fromTo(kids[0], { opacity: 0, letterSpacing: '0.8em' }, { opacity: 1, letterSpacing: '0.34em', duration: 2.2, ease: 'power3.out' }, T + 1.4);
     tl.fromTo(kids[1], { opacity: 0, filter: 'blur(10px)', y: 20 }, { opacity: 1, filter: 'blur(0px)', y: 0, duration: 1.6, ease: 'power2.out' }, T + 2.4);
     tl.fromTo(kids[2], { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 1.4, ease: 'power2.out' }, T + 3.4);
@@ -252,6 +258,7 @@ SCENES.forEach((s, i) => {
     const k2 = el('p', 'kick', 'Please welcome our moderator'); k2.style.marginTop = '56px';
     const n2 = el('h2', 'name', 'Raisa <em>Alatas</em>');
     c2.append(rp, k2, n2); b.append(c2);
+    ps.forEach((p, j) => cue(T + 1.2 + j * 0.8, 'drop', 0.85)); cue(T + 4.8, 'swell', 0.8); cue(T + 11, 'whoosh_soft', 0.7); cue(T + 13.2, 'drop'); cue(T + 14.4, 'shimmer');
     ps.forEach((p, j) => tl.fromTo(p, { opacity: 0, y: -120, scale: 1.1 }, { opacity: 1, y: 0, scale: 1, duration: 1.6, ease: 'expo.out' }, T + 1.0 + j * 0.8));
     tl.fromTo(h, { opacity: 0, filter: 'blur(10px)', y: 20 }, { opacity: 1, filter: 'blur(0px)', y: 0, duration: 1.8, ease: 'power2.out' }, T + 4.8);
     tl.to([...ps, h], { opacity: 0, filter: 'blur(10px)', duration: 1.4, ease: 'power2.in', stagger: .08 }, T + 11);
@@ -262,13 +269,14 @@ SCENES.forEach((s, i) => {
   }
 
   // masuk dan keluar: geser horizontal
+  if (!first) cue(T - 0.35, 'whoosh');
   if (!first) tl.fromTo(b, { x: 1960, visibility: 'visible' }, { x: 0, duration: SLIDE_IN, ease: 'expo.out' }, T);
   else tl.set(b, { visibility: 'visible' }, T);
   if (!last) tl.to(b, { x: -1960, duration: SLIDE_OUT, ease: 'power3.in' }, T + s.dur - SLIDE_OUT + 0.2);
   t += s.dur;
 });
 tl.set({}, {}, t); // panjang total
-window.__tl = tl; window.__marks = marks; window.__total = t;
+window.__tl = tl; window.__marks = marks; window.__total = t; window.__cues = cues.sort((a, b) => a.t - b.t);
 </script>
 </body>
 </html>
