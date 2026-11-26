@@ -1,0 +1,60 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Geist:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0}
+body{background:#111}
+.f{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:Geist,sans-serif;color:var(--ink);background:var(--bg)}
+.wm{position:absolute;right:-40px;bottom:-60px;font:italic 400 420px/0.9 Fraunces;letter-spacing:-.04em;color:var(--wm);white-space:nowrap}
+.print{position:absolute;left:190px;top:170px;width:560px;padding:20px 20px 86px;background:var(--paper);transform:rotate(-2.5deg);box-shadow:0 30px 60px rgba(0,0,0,.45),0 2px 6px rgba(0,0,0,.3)}
+.ph{height:640px;background:var(--ph);display:grid;place-items:end center;overflow:hidden}
+.ph svg{width:78%}
+.cap{position:absolute;left:24px;bottom:24px;font:italic 400 36px/1 Fraunces;color:var(--capink)}
+.copy{position:absolute;left:900px;top:300px;width:880px}
+.kick{font:600 30px/1 Geist;letter-spacing:.26em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:20px}
+.kick:before{content:"";width:60px;height:2px;background:currentColor}
+.name{margin-top:34px;font:400 132px/0.98 Fraunces;letter-spacing:-.02em}
+.name em{font-style:italic;color:var(--accent)}
+.sub{margin-top:34px;font:400 34px/1.4 Geist;color:var(--soft)}
+.chip{display:inline-block;margin-top:44px;padding:16px 30px;border:2px solid var(--accent);border-radius:999px;font:600 26px/1 Geist;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.sw{position:absolute;left:900px;bottom:90px;display:flex;gap:18px;align-items:center}
+.sw i{width:70px;height:70px;border-radius:50%;border:2px solid rgba(128,128,128,.35)}
+.sw b{margin-left:18px;font:600 26px Geist;letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
+.tag{position:absolute;left:60px;top:50px;font:600 28px Geist;letter-spacing:.2em;color:var(--soft);text-transform:uppercase}
+/* textures */
+.wood{background:repeating-linear-gradient(92deg,rgba(0,0,0,.05) 0 3px,transparent 3px 11px,rgba(255,220,180,.025) 11px 13px,transparent 13px 29px),linear-gradient(180deg,var(--bg1),var(--bg2))}
+.leather{background:radial-gradient(70% 60% at 30% 30%,rgba(255,255,255,.06),transparent 70%),repeating-radial-gradient(circle at 20% 30%,rgba(0,0,0,.05) 0 2px,transparent 2px 5px),linear-gradient(160deg,var(--bg1),var(--bg2))}
+.paper{background:radial-gradient(80% 70% at 70% 20%,rgba(255,255,255,.7),transparent 70%),repeating-linear-gradient(0deg,rgba(0,0,0,.018) 0 1px,transparent 1px 4px),linear-gradient(180deg,var(--bg1),var(--bg2))}
+</style></head><body>
+
+<!-- A -->
+<div class="f wood" id="A" style="--bg1:#33231a;--bg2:#24180f;--ink:#f3eee4;--soft:#d9ccb8;--accent:#c9a45c;--paper:#f4efe6;--capink:#3a2e22;--ph:#5a4636;--wm:rgba(201,164,92,.07)">
+ <p class="tag">Opsi A · Walnut Archive</p><p class="wm">Moderator</p>
+ <div class="print"><div class="ph"><svg viewBox="0 0 100 100"><circle cx="50" cy="38" r="20" fill="#7a624d"/><path d="M8 100c4-28 22-40 42-40s38 12 42 40z" fill="#7a624d"/></svg></div><p class="cap">Raisa, 2026</p></div>
+ <div class="copy"><p class="kick">The Moderator</p><h2 class="name">Raisa <em>Alatas</em></h2><p class="sub">Management Student, Universitas Pekalongan</p></div>
+ <div class="sw"><i style="background:#2b1d14"></i><i style="background:#c9a45c"></i><i style="background:#f4efe6"></i><i style="background:#d9ccb8"></i><b>Kayu walnut · emas · krem</b></div>
+</div>
+
+<!-- B -->
+<div class="f leather" id="B" style="--bg1:#13254a;--bg2:#07122a;--ink:#f3efe6;--soft:#b9c3d8;--accent:#d4af5f;--paper:#f6f2ea;--capink:#1b2a4a;--ph:#2b3d63;--wm:rgba(212,175,95,.07)">
+ <p class="tag">Opsi B · Midnight Navy</p><p class="wm">Speaker</p>
+ <div class="print"><div class="ph"><svg viewBox="0 0 100 100"><circle cx="50" cy="38" r="20" fill="#4a5f8a"/><path d="M8 100c4-28 22-40 42-40s38 12 42 40z" fill="#4a5f8a"/></svg></div><p class="cap">Lucy, Dili to Pekalongan</p></div>
+ <div class="copy"><p class="kick">Speaker 01</p><h2 class="name">Luciana <em>Lelihoo</em> Madeira</h2><p class="sub">International Student from Timor-Leste</p></div>
+ <div class="sw"><i style="background:#0b1b3a"></i><i style="background:#d4af5f"></i><i style="background:#f6f2ea"></i><i style="background:#b9c3d8"></i><b>Navy kulit · emas · putih gading</b></div>
+</div>
+
+<!-- C -->
+<div class="f leather" id="C" style="--bg1:#4a1620;--bg2:#2a0b12;--ink:#f5ece0;--soft:#dcc3b8;--accent:#c8a35a;--paper:#f3ebdf;--capink:#4a1620;--ph:#6e3540;--wm:rgba(200,163,90,.08)">
+ <p class="tag">Opsi C · Oxblood &amp; Brass</p><p class="wm">Speaker</p>
+ <div class="print"><div class="ph"><svg viewBox="0 0 100 100"><circle cx="50" cy="38" r="20" fill="#8e5560"/><path d="M8 100c4-28 22-40 42-40s38 12 42 40z" fill="#8e5560"/></svg></div><p class="cap">Erick, UBD 2026</p></div>
+ <div class="copy"><p class="kick">Speaker 02</p><h2 class="name">Erick <em>Kurniawan</em> Syah</h2><p class="sub">Student Exchange, Universiti Brunei Darussalam</p></div>
+ <div class="sw"><i style="background:#3a1018"></i><i style="background:#c8a35a"></i><i style="background:#f3ebdf"></i><i style="background:#dcc3b8"></i><b>Merah marun · kuningan · krem</b></div>
+</div>
+
+<!-- D -->
+<div class="f paper" id="D" style="--bg1:#f4eee2;--bg2:#e8dfcd;--ink:#0b1b3a;--soft:#4b5670;--accent:#a8822e;--paper:#ffffff;--capink:#0b1b3a;--ph:#cfd6e3;--wm:rgba(11,27,58,.05)">
+ <p class="tag">Opsi D · Ivory Editorial</p><p class="wm">Speaker</p>
+ <div class="print"><div class="ph"><svg viewBox="0 0 100 100"><circle cx="50" cy="38" r="20" fill="#93a1ba"/><path d="M8 100c4-28 22-40 42-40s38 12 42 40z" fill="#93a1ba"/></svg></div><p class="cap">Laela, 2026</p></div>
+ <div class="copy"><p class="kick">Speaker 03</p><h2 class="name">Laela <em>[nama lengkap]</em></h2><p class="sub">Management Student, Universitas Pekalongan</p></div>
+ <div class="sw"><i style="background:#f4eee2"></i><i style="background:#0b1b3a"></i><i style="background:#a8822e"></i><i style="background:#4b5670"></i><b>Kertas gading · navy · emas tua</b></div>
+</div>
+</body></html>
